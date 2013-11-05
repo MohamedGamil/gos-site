@@ -1,7 +1,7 @@
 Framework Files Structure
 ===
 
-* ****_css_**** : "CSS files directory"
+* **_css_** : "CSS files directory"
 	+ **_fonts_** : "Fonts directory"
 	+ **_images_** : "jQuery-UI images directory"
 	+ **_sass-gos_** : "Gems/SASS Core files"
