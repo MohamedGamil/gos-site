@@ -1,0 +1,22 @@
+// ==========================================================================
+// SASS Libraries, Commons, and Config
+// ==========================================================================
+@import 'bourbon/bourbon';
+
+@import 'commons';
+@import 'gos-styling/base-styling';
+@import 'gos-styling/pre-styling';
+
+@import 'gos-grid/grid';
+@import 'gos-grid/grid-responsive';
+@import 'gos-grid/grid-rtl';
+@import 'gos-grid/grid-responsive-rtl';
+
+
+@if $enable_rtl	!= false {
+	@include gos-grid-rtl();
+	@include gos-grid-responsive-rtl();
+} @else {
+	@include gos-grid();
+	@include gos-grid-responsive();
+}

@@ -1,0 +1,74 @@
+!!!
+== <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7 IE"> <![endif]-->
+== <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 IE"> <![endif]-->
+== <!--[if IE 8]>         <html class="no-js lt-ie9 IE"> <![endif]-->
+== <!--[if gt IE 8]>      <html class="no-js gt-ie8 IE"> <![endif]-->
+== <!--[if !IE]><!-->
+%html{:class => 'no-js'}
+	== <!--<![endif]-->
+	\
+	
+	%head
+		%title Page Title
+		
+		%meta{:charset => 'utf-8'}
+		%meta{:name => 'viewport', :content => 'width=device-width,initial-scale=1'}
+		
+		%link{:rel => 'stylesheet', :type => 'text/css', :href => 'css/reset.css'}
+		%link{:rel => 'stylesheet', :type => 'text/css', :href => 'css/jquery-ui.css'}
+		%link{:rel => 'stylesheet', :type => 'text/css', :href => 'css/gos.css'}
+		
+		%script{:type => 'text/javascript', :src => 'js/libs/jquery-1.9.1.min.js'}
+		%script{:type => 'text/javascript', :src => 'js/libs/modernizr-2.6.2.min.js'}
+		
+		/
+			More info about jQuery Migrate at https://github.com/jquery/jquery-migrate
+			%script{:type => 'text/javascript', :src => 'js/libs/jquery-migrate-1.2.1.js'}
+		
+		/
+			\Since the "X-UA-Compatible" value causes validation errors,
+			\but its still needed for IE users.
+			%meta{ 'http-equiv' => 'X-UA-Compatible', :content => 'IE=edge,chrome=1'}
+			\. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+			\
+			\Use this PHP code instead, at the top of your code..
+			\if ( isset($_SERVER['HTTP_USER_AGENT']) && ( strpos( $_SERVER['HTTP_USER_AGENT'], 'MSIE') !== false ) )
+			\header('X-UA-Compatible: IE=edge,chrome=1');
+			\. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+			\
+			\Or just send these headers values ('X-UA-Compatible: IE=edge,chrome=1')
+	\
+	-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	
+	%body
+		\
+		
+		
+		%header#main-header
+		//Header
+		\
+		
+		
+		%div{:role => 'main'}
+		//Content
+		\
+		
+		
+		%footer#main-footer
+		//Footer
+		\
+		
+		
+		#dialogs-container.hidden
+		//Dialogs Container
+		\
+		
+		
+		/ Javascript
+		%script{:type => 'text/javascript', :src => 'js/libs/jquery-ui/jquery-ui.1.8.23.min.js'}
+		%script{:type => 'text/javascript', :src => 'js/libs/jquery-ui/jquery-ui.toggleSwitch.min.js'}
+		%script{:type => 'text/javascript', :src => 'js/libs/plugins.js'}
+		%script{:type => 'text/javascript', :src => 'js/gos-tests.js'}
+		%script{:type => 'text/javascript', :src => 'js/gos.js'}
+		\
+	\

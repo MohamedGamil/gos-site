@@ -1,0 +1,335 @@
+
+// /*
+//  * To String
+//  * a Function that Converts a Non-String to a String
+//  *
+//  * @Example	to-string( 3px );
+//  */
+@function to-string( $nstring ) {
+	@return quote( $nstring + '' );
+}
+
+
+
+// /*
+//  * Border Radius
+//  *
+//  * @Example	@include border-radius( 3px );
+//  */
+@mixin border-radius( $amount : 3px  ) {
+	-webkit-border-radius: $amount;
+		-moz-border-radius: $amount;
+			-o-border-radius: $amount;
+				border-radius: $amount;
+}
+
+
+
+// /*
+//  * Box Shadow
+//  *
+//  * @Example	@include box-shadow( 0 1px 3px #DDD );
+//  */
+@mixin box-shadow( $arg ) {
+	-webkit-box-shadow: $arg;
+		-moz-box-shadow: $arg;
+			box-shadow: $arg;
+}
+
+
+// /*
+//  * Opacity
+//  *
+//  * @Example	@include opacity( 0.1 );
+//  */
+@mixin opacity( $amount : 0.5, $important : null ) {
+	
+	@if ( $important != null ) {
+		$important	: '!important';
+	} @else {
+		$important	: '';
+	}
+	$important	: unquote( $important );
+	
+	opacity: $amount $important;
+	filter: alpha(opacity=$amount * 100) $important;
+	-moz-opacity: $amount $important;
+	-khtml-opacity: $amount $important;
+	-webkit-opacity: $amount $important;
+}
+
+
+
+// /*
+//  * Input Placholder Color
+//  *
+//  * @Example	@include placeholder( #FFF );
+//  */
+@mixin placeholder( $color : #666 ) {
+	
+	&::-webkit-input-placeholder {
+	   color: $color;
+	}
+
+	&:-moz-placeholder { /* Firefox 18- */
+	   color: $color;  
+	}
+
+	&::-moz-placeholder {  /* Firefox 19+ */
+	   color: $color;  
+	}
+
+	&:-ms-input-placeholder {  
+	   color: $color;  
+	}
+}
+
+
+
+// /*
+//  * Bootstrap Icon
+//  * This @mixin allows you to apply a Bootstrap Icon Style to an element
+//  *
+//  * @Param 1	Icon Name
+//  * @Param 2	Use The White Set ( just pass anything otherwise than "null", like "true" )
+//  * @Example	@include bootstrap-icon( 'calendar' );
+//  */
+@mixin bootstrap-icon( $icon : null, $invert : null ) {
+	display: inline-block;
+	vertical-align: text-top;
+	width: 14px;
+	height: 14px;
+	margin-top: 1px;
+	line-height: 14px;
+	background-repeat: no-repeat;
+	
+	@if ( $invert == null ) {
+		background-image: url( $imgs + 'shared/glyphicons/glyphicons-halflings.png' );
+	} @else {
+		background-image: url( $imgs + 'shared/glyphicons/glyphicons-halflings-white.png' );
+	}
+	
+	$bicons-list	:
+	(
+		'glass' '0px 0px',
+		'music' '-24px 0',
+		'search' '-48px 0',
+		'envelope' '-72px 0',
+		'heart' '-96px 0',
+		'star' '-120px 0',
+		'star-empty' '-144px 0',
+		'user' '-168px 0',
+		'film' '-192px 0',
+		'th-large' '-216px 0',
+		'th' '-240px 0',
+		'th-list' '-264px 0',
+		'ok' '-288px 0',
+		'remove' '-312px 0',
+		'zoom-in' '-336px 0',
+		'zoom-out' '-360px 0',
+		'off' '-384px 0',
+		'signal' '-408px 0',
+		'cog' '-432px 0',
+		'trash' '-456px 0',
+		'home' '0 -24px',
+		'file' '-24px -24px',
+		'time' '-48px -24px',
+		'road' '-72px -24px',
+		'download-alt' '-96px -24px',
+		'download' '-120px -24px',
+		'upload' '-144px -24px',
+		'inbox' '-168px -24px',
+		'play-circle' '-192px -24px',
+		'repeat' '-216px -24px',
+		'refresh' '-240px -24px',
+		'list-alt' '-264px -24px',
+		'lock' '-287px -24px',
+		'flag' '-312px -24px',
+		'headphones' '-336px -24px',
+		'volume-off' '-360px -24px',
+		'volume-down' '-384px -24px',
+		'volume-up' '-408px -24px',
+		'qrcode' '-432px -24px',
+		'barcode' '-456px -24px',
+		'tag' '0 -48px',
+		'tags' '-25px -48px',
+		'book' '-48px -48px',
+		'bookmark' '-72px -48px',
+		'print' '-96px -48px',
+		'camera' '-120px -48px',
+		'font' '-144px -48px',
+		'bold' '-167px -48px',
+		'italic' '-192px -48px',
+		'text-height' '-216px -48px',
+		'text-width' '-240px -48px',
+		'align-left' '-264px -48px',
+		'align-center' '-288px -48px',
+		'align-right' '-312px -48px',
+		'align-justify' '-336px -48px',
+		'list' '-360px -48px',
+		'indent-left' '-384px -48px',
+		'indent-right' '-408px -48px',
+		'facetime-video' '-432px -48px',
+		'picture' '-456px -48px',
+		'pencil' '0 -72px',
+		'map-marker' '-24px -72px',
+		'adjust' '-48px -72px',
+		'tint' '-72px -72px',
+		'edit' '-96px -72px',
+		'share' '-120px -72px',
+		'check' '-144px -72px',
+		'move' '-168px -72px',
+		'step-backward' '-192px -72px',
+		'fast-backward' '-216px -72px',
+		'backward' '-240px -72px',
+		'play' '-264px -72px',
+		'pause' '-288px -72px',
+		'stop' '-312px -72px',
+		'forward' '-336px -72px',
+		'fast-forward' '-360px -72px',
+		'step-forward' '-384px -72px',
+		'eject' '-408px -72px',
+		'chevron-left' '-432px -72px',
+		'chevron-right' '-456px -72px',
+		'plus-sign' '0 -96px',
+		'minus-sign' '-24px -96px',
+		'remove-sign' '-48px -96px',
+		'ok-sign' '-72px -96px',
+		'question-sign' '-96px -96px',
+		'info-sign' '-120px -96px',
+		'screenshot' '-144px -96px',
+		'remove-circle' '-168px -96px',
+		'ok-circle' '-192px -96px',
+		'ban-circle' '-216px -96px',
+		'arrow-left' '-240px -96px',
+		'arrow-right' '-264px -96px',
+		'arrow-up' '-289px -96px',
+		'arrow-down' '-312px -96px',
+		'share-alt' '-336px -96px',
+		'resize-full' '-360px -96px',
+		'resize-small' '-384px -96px',
+		'plus' '-408px -96px',
+		'minus' '-433px -96px',
+		'asterisk' '-456px -96px',
+		'exclamation-sign' '0 -120px',
+		'gift' '-24px -120px',
+		'leaf' '-48px -120px',
+		'fire' '-72px -120px',
+		'eye-open' '-96px -120px',
+		'eye-close' '-120px -120px',
+		'warning-sign' '-144px -120px',
+		'plane' '-168px -120px',
+		'calendar' '-192px -120px',
+		'random' '-216px -120px' 16px,
+		'comment' '-240px -120px',
+		'magnet' '-264px -120px',
+		'chevron-up' '-288px -120px',
+		'chevron-down' '-313px -119px',
+		'retweet' '-336px -120px',
+		'shopping-cart' '-360px -120px',
+		'folder-close' '-384px -120px',
+		'folder-open' '-408px -120px' 16px,
+		'resize-vertical' '-432px -119px',
+		'resize-horizontal' '-456px -118px',
+		'hdd' '0 -144px',
+		'bullhorn' '-24px -144px',
+		'bell' '-48px -144px',
+		'certificate' '-72px -144px',
+		'thumbs-up' '-96px -144px',
+		'thumbs-down' '-120px -144px',
+		'hand-right' '-144px -144px',
+		'hand-left' '-168px -144px',
+		'hand-up' '-192px -144px',
+		'hand-down' '-216px -144px',
+		'circle-arrow-right' '-240px -144px',
+		'circle-arrow-left' '-264px -144px',
+		'circle-arrow-up' '-288px -144px',
+		'circle-arrow-down' '-312px -144px',
+		'globe' '-336px -144px',
+		'wrench' '-360px -144px',
+		'tasks' '-384px -144px',
+		'filter' '-408px -144px',
+		'briefcase' '-432px -144px',
+		'fullscreen' '-456px -144px'
+	);
+	
+	$icon-found	: false;
+	
+	@each $i in $bicons-list {
+		$name	: unquote( nth( $i, 1 ) );
+		$pos	: unquote( nth( $i, 2 ) );
+		
+		@if ( $icon == $name ) {
+			$icon-found	: true;
+			background-position: $pos;
+			
+			@if ( length( $i ) > 2 ) {
+				width: nth( $i, 3 );
+			}
+		}
+	}
+	
+	@if ( $icon-found == false ) {
+		background-position: 14px 14px;
+	}
+}
+
+
+
+// /*
+//  * Reset Box Shadow
+//  * A quick shorthand @mixin to reset box shadow styling
+//  *
+//  * @Example	@include reset-box-shadow;
+//  */
+@mixin reset-box-shadow() {
+	-webkit-box-shadow: 0 0 0 transparent;
+		-moz-box-shadow: 0 0 0 transparent;
+			box-shadow: 0 0 0 transparent;
+}
+
+
+
+// /*
+//  * Filter
+//  * This @mixin allows you to apply a Filter Effect on an element
+//  *
+//  * @Notice	FireFox Fixes Included
+//  * @Notice	This mixin depends on functions defined in "./config.rb"
+//  * @Example	@include filter( grayscale, 100% );
+//  * @See		https://dvcs.w3.org/hg/FXTF/raw-file/tip/filters/index.html
+//  * 
+//  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+//  * 
+//  * Please note that Filters usage may differ :
+//  *
+//  *	Grayscale      filter( grayscale, 100% );
+//  *	Sepia          filter( sepia, 100% );
+//  *	Saturate       filter( saturate, 0% );
+//  *	Hue-Rotate     filter( hue-rotate, 45deg );
+//  *	Invert         filter( invert, 100% );
+//  *	Brightness     filter( brightness, 15% );
+//  *	Contrast       filter( contrast, 200% );
+//  *	Blur           filter( blur, 2px );
+//  *
+//  */
+@mixin filter( $filter-type, $filter-amount ) {
+	$filter-type	: unquote(  $filter-type );
+	
+	-webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+	-moz-filter: $filter-type+unquote('(#{$filter-amount})');
+	-ms-filter: $filter-type+unquote('(#{$filter-amount})');
+	-o-filter: $filter-type+unquote('(#{$filter-amount})');
+	filter: $filter-type+unquote('(#{$filter-amount})');
+	
+	@if ( $filter-type == grayscale ) {
+		filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+		filter: gray; /* IE 6-9 */
+	}
+
+	@if ( $filter-type == blur ) {
+		$amount	: unquote( str-replace( to-string( $filter-amount ), 'px', '' ) );
+		filter: url("data:image/svg+xml;utf8,<svg version=\'1.1\' xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'blur\'><feGaussianBlur stdDeviation=\'"+ $amount +"\'/></filter></svg>#blur"); /* Firefox */
+	}
+}
+

@@ -1,0 +1,35 @@
+// /*
+//  * Theme Colors Logic
+//  */
+
+
+
+// == Define The Normal Styles
+.theme-text-color {
+	
+}
+
+.theme-bg-color {
+	
+}
+
+// == Loop Through Each Theme Color
+@each $c in $theme-colors {
+	$name	: unquote( nth( $c, 1 ) );
+	$color	: unquote( nth( $c, 2 ) );
+	
+	/*
+	 * Theme Color "#{$name}"
+	 */
+	body.theme-#{$name} {
+		color: #FFF;
+		
+		.theme-text-color {
+			color: $color;
+		}
+		
+		.theme-bg-color {
+			background-color: $color;
+		}
+	}
+}

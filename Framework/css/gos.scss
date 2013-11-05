@@ -1,0 +1,37 @@
+/*
+ * Site Styling Sheet.
+ * - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ * @author		Gemy.me, <www.gemy.me>.
+ * @copyright	Gemy.me 2013 All Rights Reserved.
+ * @license		MIT
+ */
+
+
+// ==========================================================================
+// Configuration
+// ==========================================================================
+$imgs			:	'../images/';					// # Images Directory
+$theme-colors	:	orange #ea6045,					// # Theme Multi-Colors
+					blue #067ab5,
+					green #89b435;
+$enable_rtl		:	false;							// # Enable RTL Grid ?
+
+
+
+// ==========================================================================
+// Top Includes
+// ==========================================================================
+@import 'sass-gos/includes';
+
+
+
+// ==========================================================================
+// User Styles
+// ==========================================================================
+@import 'sass-user/base';
+@import 'sass-user/header';
+@import 'sass-user/content';
+@import 'sass-user/footer';
+@import 'sass-user/theme-colors';
+@import 'sass-user/responsive';
+@import 'sass-user/plugins';

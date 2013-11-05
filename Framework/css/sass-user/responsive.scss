@@ -1,0 +1,25 @@
+// /*
+//  * Theme Responsive Styles
+//  */
+
+// = Desktop ( 1170px )
+@media (min-width: 1200px) {
+	// Nothing should be here, default theme style
+	// is based on 1900px grid system.
+}
+
+// = Styles for min-width: ( 768px ), and max-width : ( 1024px )
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+// = Tablets ( 768px ~ 979px )
+@media (min-width: 768px) and (max-width: 979px) {
+}
+
+// = Phones ( 767px )
+@media (max-width: 767px) {
+}
+
+// = Anything less than ( 480px )
+@media (max-width: 480px) {
+}

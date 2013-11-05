@@ -1,0 +1,803 @@
+// Based on Bootstrap Responsive v2.3.2
+// - - - - -
+// Modified by @Gemy <gemy.me>
+// Note that the Code has been modified to be compatible with the HTML structure.
+// Plus some changes to the code functionality.
+
+
+// /*
+//  * Responsive Grid System (RTL)
+//  */
+@mixin gos-grid-responsive-rtl {
+	
+	
+	/**
+	 * Default device specialization.
+	 */
+
+	@-ms-viewport {
+	  width: device-width;
+	}
+
+	.visible-phone {
+	  display: none !important;
+	}
+
+	.visible-tablet {
+	  display: none !important;
+	}
+
+	.hidden-desktop {
+	  display: none !important;
+	}
+
+	.visible-desktop {
+	  display: inherit !important;
+	}
+
+	.visible-print {
+		display: none !important;
+	}
+
+
+
+	/**
+	 * Responsive device specialization.
+	 */
+
+	@media (min-width: 768px) and (max-width: 979px) {
+		
+		.hidden-desktop {
+			display: inherit !important;
+		}
+		
+		.visible-desktop {
+			display: none !important;
+		}
+		
+		.visible-tablet {
+			display: inherit !important;
+		}
+		
+		.hidden-tablet {
+			display: none !important;
+		}
+	}
+
+	@media (max-width: 767px) {
+		
+		.hidden-desktop {
+			display: inherit !important;
+		}
+		
+		.visible-desktop {
+			display: none !important;
+		}
+		
+		.visible-phone {
+			display: inherit !important;
+		}
+		
+		.hidden-phone {
+			display: none !important;
+		}
+	}
+
+	@media print {
+		
+		.visible-print {
+			display: inherit !important;
+		}
+		
+		.hidden-print {
+			display: none !important;
+		}
+	}
+
+
+
+	/**
+	 * Desktop ( 1170px ).
+	 */
+
+	@media (min-width: 1200px) {
+
+		.container {
+			width: 1170px;
+		}
+		
+		.row {
+			margin-right: -30px;
+			
+			[class*="col-"] {
+				float: right;
+				min-height: 1px;
+				margin-right: 30px;
+			}
+			
+			.col-12 {
+				width: 1170px;
+			}
+			
+			.col-11 {
+				width: 1070px;
+			}
+			
+			.col-10 {
+				width: 970px;
+			}
+			
+			.col-9 {
+				width: 870px;
+			}
+			
+			.col-8 {
+				width: 770px;
+			}
+			
+			.col-7 {
+				width: 670px;
+			}
+			
+			.col-6 {
+				width: 570px;
+			}
+			
+			.col-5 {
+				width: 470px;
+			}
+			
+			.col-4 {
+				width: 370px;
+			}
+			
+			.col-3 {
+				width: 270px;
+			}
+			
+			.col-2 {
+				width: 170px;
+			}
+			
+			.col-1 {
+				width: 70px;
+			}
+			
+			.offset-12 {
+				margin-right: 1230px;
+			}
+			
+			.offset-11 {
+				margin-right: 1130px;
+			}
+			
+			.offset-10 {
+				margin-right: 1030px;
+			}
+			
+			.offset-9 {
+				margin-right: 930px;
+			}
+			
+			.offset-8 {
+				margin-right: 830px;
+			}
+			
+			.offset-7 {
+				margin-right: 730px;
+			}
+			
+			.offset-6 {
+				margin-right: 630px;
+			}
+			
+			.offset-5 {
+				margin-right: 530px;
+			}
+			
+			.offset-4 {
+				margin-right: 430px;
+			}
+			
+			.offset-3 {
+				margin-right: 330px;
+			}
+			
+			.offset-2 {
+				margin-right: 230px;
+			}
+			
+			.offset-1 {
+				margin-right: 130px;
+			}
+			
+			
+			// == Fluid Layout
+			&.fluid {
+				width: 100%;
+				
+				[class*="col-"] {
+					display: block;
+					float: right;
+					width: 100%;
+					min-height: 30px;
+					margin-right: 2.564102564102564%;
+					*margin-right: 2.5109110747408616%;
+					-webkit-box-sizing: border-box;
+					-moz-box-sizing: border-box;
+					box-sizing: border-box;
+					
+					&:first-child {
+						margin-right: 0;
+					}
+				}
+				
+				.col-12 {
+					width: 100%;
+					*width: 99.94680851063829%;
+				}
+				
+				.col-11 {
+					width: 91.45299145299145%;
+					*width: 91.39979996362975%;
+				}
+				
+				.col-10 {
+					width: 82.90598290598291%;
+					*width: 82.8527914166212%;
+				}
+				
+				.col-9 {
+					width: 74.35897435897436%;
+					*width: 74.30578286961266%;
+				}
+				
+				.col-8 {
+					width: 65.81196581196582%;
+					*width: 65.75877432260411%;
+				}
+				
+				.col-7 {
+					width: 57.26495726495726%;
+					*width: 57.21176577559556%;
+				}
+				
+				.col-6 {
+					width: 48.717948717948715%;
+					*width: 48.664757228587014%;
+				}
+				
+				.col-5 {
+					width: 40.17094017094017%;
+					*width: 40.11774868157847%;
+				}
+				
+				.col-4 {
+					width: 31.623931623931625%;
+					*width: 31.570740134569924%;
+				}
+				
+				.col-3 {
+					width: 23.076923076923077%;
+					*width: 23.023731587561375%;
+				}
+				
+				.col-2 {
+					width: 14.52991452991453%;
+					*width: 14.476723040552828%;
+				}
+				
+				.col-1 {
+					width: 5.982905982905983%;
+					*width: 5.929714493544281%;
+				}
+				
+				.offset-12 {
+					margin-right: 105.12820512820512%;
+					*margin-right: 105.02182214948171%;
+					&:first-child {
+						margin-right: 102.56410256410257%;
+						*margin-right: 102.45771958537915%;
+					}
+				}
+				
+				.offset-11 {
+					margin-right: 96.58119658119658%;
+					*margin-right: 96.47481360247316%;
+					&:first-child {
+						margin-right: 94.01709401709402%;
+						*margin-right: 93.91071103837061%;
+					}
+				}
+				
+				.offset-10 {
+					margin-right: 88.03418803418803%;
+					*margin-right: 87.92780505546462%;
+					&:first-child {
+						margin-right: 85.47008547008548%;
+						*margin-right: 85.36370249136206%;
+					}
+				}
+				
+				.offset-9 {
+					margin-right: 79.48717948717949%;
+					*margin-right: 79.38079650845607%;
+					&:first-child {
+						margin-right: 76.92307692307693%;
+						*margin-right: 76.81669394435352%;
+					}
+				}
+				
+				.offset-8 {
+					margin-right: 70.94017094017094%;
+					*margin-right: 70.83378796144753%;
+					&:first-child {
+						margin-right: 68.37606837606839%;
+						*margin-right: 68.26968539734497%;
+					}
+				}
+				
+				.offset-7 {
+					margin-right: 62.393162393162385%;
+					*margin-right: 62.28677941443899%;
+					&:first-child {
+						margin-right: 59.82905982905982%;
+						*margin-right: 59.72267685033642%;
+					}
+				}
+				
+				.offset-6 {
+					margin-right: 53.84615384615384%;
+					*margin-right: 53.739770867430444%;
+					&:first-child {
+						margin-right: 51.28205128205128%;
+						*margin-right: 51.175668303327875%;
+					}
+				}
+				
+				.offset-5 {
+					margin-right: 45.299145299145295%;
+					*margin-right: 45.1927623204219%;
+					&:first-child {
+						margin-right: 42.73504273504273%;
+						*margin-right: 42.62865975631933%;
+					}
+				}
+				
+				.offset-4 {
+					margin-right: 36.75213675213675%;
+					*margin-right: 36.645753773413354%;
+					&:first-child {
+						margin-right: 34.18803418803419%;
+						*margin-right: 34.081651209310785%;
+					}
+				}
+				
+				.offset-3 {
+					margin-right: 28.205128205128204%;
+					*margin-right: 28.0987452264048%;
+					&:first-child {
+						margin-right: 25.641025641025642%;
+						*margin-right: 25.53464266230224%;
+					}
+				}
+				
+				.offset-2 {
+					margin-right: 19.65811965811966%;
+					*margin-right: 19.551736679396257%;
+					&:first-child {
+						margin-right: 17.094017094017094%;
+						*margin-right: 16.98763411529369%;
+					}
+				}
+				
+				.offset-1 {
+					margin-right: 11.11111111111111%;
+					*margin-right: 11.004728132387708%;
+					&:first-child {
+						margin-right: 8.547008547008547%;
+						*margin-right: 8.440625568285142%;
+					}
+				}
+			}
+		}
+	}
+
+
+
+	/**
+	 * Tablets ( 768px ~ 979px ).
+	 */
+
+	@media (min-width: 768px) and (max-width: 979px) {
+
+		.container {
+			width: 724px;
+		}
+		
+		.row {
+			margin-right: -20px;
+			
+			[class*="col-"] {
+				float: right;
+				min-height: 1px;
+				margin-right: 20px;
+			}
+
+			.col-12 {
+				width: 724px;
+			}
+
+			.col-11 {
+				width: 662px;
+			}
+
+			.col-10 {
+				width: 600px;
+			}
+
+			.col-9 {
+				width: 538px;
+			}
+
+			.col-8 {
+				width: 476px;
+			}
+
+			.col-7 {
+				width: 414px;
+			}
+
+			.col-6 {
+				width: 352px;
+			}
+
+			.col-5 {
+				width: 290px;
+			}
+
+			.col-4 {
+				width: 228px;
+			}
+
+			.col-3 {
+				width: 166px;
+			}
+
+			.col-2 {
+				width: 104px;
+			}
+
+			.col-1 {
+				width: 42px;
+			}
+
+			.offset-12 {
+				margin-right: 764px;
+			}
+
+			.offset-11 {
+				margin-right: 702px;
+			}
+
+			.offset-10 {
+				margin-right: 640px;
+			}
+
+			.offset-9 {
+				margin-right: 578px;
+			}
+
+			.offset-8 {
+				margin-right: 516px;
+			}
+
+			.offset-7 {
+				margin-right: 454px;
+			}
+
+			.offset-6 {
+				margin-right: 392px;
+			}
+
+			.offset-5 {
+				margin-right: 330px;
+			}
+
+			.offset-4 {
+				margin-right: 268px;
+			}
+
+			.offset-3 {
+				margin-right: 206px;
+			}
+
+			.offset-2 {
+				margin-right: 144px;
+			}
+
+			.offset-1 {
+				margin-right: 82px;
+			}
+			
+			
+			// == Fluid Layout
+			&.fluid {
+				width: 100%;
+				
+				[class*="col-"] {
+					display: block;
+					float: right;
+					width: 100%;
+					min-height: 30px;
+					margin-right: 2.7624309392265194%;
+					*margin-right: 2.709239449864817%;
+					-webkit-box-sizing: border-box;
+					-moz-box-sizing: border-box;
+					box-sizing: border-box;
+					
+					&:first-child {
+						margin-right: 0;
+					}
+				}
+
+				.col-12 {
+					width: 100%;
+					*width: 99.94680851063829%;
+				}
+
+				.col-11 {
+					width: 91.43646408839778%;
+					*width: 91.38327259903608%;
+				}
+
+				.col-10 {
+					width: 82.87292817679558%;
+					*width: 82.81973668743387%;
+				}
+
+				.col-9 {
+					width: 74.30939226519337%;
+					*width: 74.25620077583166%;
+				}
+
+				.col-8 {
+					width: 65.74585635359117%;
+					*width: 65.69266486422946%;
+				}
+
+				.col-7 {
+					width: 57.18232044198895%;
+					*width: 57.12912895262725%;
+				}
+
+				.col-6 {
+					width: 48.61878453038674%;
+					*width: 48.56559304102504%;
+				}
+
+				.col-5 {
+					width: 40.05524861878453%;
+					*width: 40.00205712942283%;
+				}
+
+				.col-4 {
+					width: 31.491712707182323%;
+					*width: 31.43852121782062%;
+				}
+
+				.col-3 {
+					width: 22.92817679558011%;
+					*width: 22.87498530621841%;
+				}
+
+				.col-2 {
+					width: 14.3646408839779%;
+					*width: 14.311449394616199%;
+				}
+
+				.col-1 {
+					width: 5.801104972375691%;
+					*width: 5.747913483013988%;
+				}
+
+				.offset-12 {
+					margin-right: 105.52486187845304%;
+					*margin-right: 105.41847889972962%;
+					&:first-child {
+						margin-right: 102.76243093922652%;
+						*margin-right: 102.6560479605031%;
+					}
+
+				}
+
+				.offset-11 {
+					margin-right: 96.96132596685082%;
+					*margin-right: 96.8549429881274%;
+					
+					&:first-child {
+						margin-right: 94.1988950276243%;
+						*margin-right: 94.09251204890089%;
+					}
+				}
+
+				.offset-10 {
+					margin-right: 88.39779005524862%;
+					*margin-right: 88.2914070765252%;
+					
+					&:first-child {
+						margin-right: 85.6353591160221%;
+						*margin-right: 85.52897613729868%;
+					}
+				}
+
+				.offset-9 {
+					margin-right: 79.8342541436464%;
+					*margin-right: 79.72787116492299%;
+					
+					&:first-child {
+						margin-right: 77.07182320441989%;
+						*margin-right: 76.96544022569647%;
+					}
+				}
+
+				.offset-8 {
+					margin-right: 71.2707182320442%;
+					*margin-right: 71.16433525332079%;
+					
+					&:first-child {
+						margin-right: 68.50828729281768%;
+						*margin-right: 68.40190431409427%;
+					}
+				}
+
+				.offset-7 {
+					margin-right: 62.70718232044199%;
+					*margin-right: 62.600799341718584%;
+					
+					&:first-child {
+						margin-right: 59.94475138121547%;
+						*margin-right: 59.838368402492065%;
+					}
+				}
+
+				.offset-6 {
+					margin-right: 54.14364640883978%;
+					*margin-right: 54.037263430116376%;
+					
+					&:first-child {
+						margin-right: 51.38121546961326%;
+						*margin-right: 51.27483249088986%;
+					}
+				}
+
+				.offset-5 {
+					margin-right: 45.58011049723757%;
+					*margin-right: 45.47372751851417%;
+					
+					&:first-child {
+						margin-right: 42.81767955801105%;
+						*margin-right: 42.71129657928765%;
+					}
+				}
+
+				.offset-4 {
+					margin-right: 37.01657458563536%;
+					*margin-right: 36.91019160691196%;
+					
+					&:first-child {
+						margin-right: 34.25414364640884%;
+						*margin-right: 34.14776066768544%;
+					}
+				}
+
+				.offset-3 {
+					margin-right: 28.45303867403315%;
+					*margin-right: 28.346655695309746%;
+					
+					&:first-child {
+						margin-right: 25.69060773480663%;
+						*margin-right: 25.584224756083227%;
+					}
+				}
+
+				.offset-2 {
+					margin-right: 19.88950276243094%;
+					*margin-right: 19.783119783707537%;
+					
+					&:first-child {
+						margin-right: 17.12707182320442%;
+						*margin-right: 17.02068884448102%;
+					}
+				}
+
+				.offset-1 {
+					margin-right: 11.32596685082873%;
+					*margin-right: 11.219583872105325%;
+					
+					&:first-child {
+						margin-right: 8.56353591160221%;
+						*margin-right: 8.457152932878806%;
+					}
+				}
+			}
+		}
+	}
+
+
+
+	/**
+	 * Phones ( 767px ).
+	 */
+
+	@media (max-width: 767px) {
+		
+		body {
+			padding-right: 20px;
+			padding-left: 20px;
+		}
+
+		.container.fluid {
+			padding: 0;
+		}
+
+		.container {
+			width: auto;
+		}
+
+		.row {
+			margin-right: 0;
+
+			.col-12 {
+				width: 100%;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+			
+			[class*="col-"], &.fluid [class*="col-"] {
+				display: block;
+				float: none;
+				width: 100%;
+				margin-right: 0;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+			
+			
+			// == Fluid Layout
+			&.fluid {
+				width: 100%;
+				
+				.col-12 {
+					width: 100%;
+					-webkit-box-sizing: border-box;
+					-moz-box-sizing: border-box;
+					box-sizing: border-box;
+				}
+
+				[class*="offset-"]:first-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+
+
+	/**
+	 * Anything less than ( 480px ).
+	 */
+
+	@media (max-width: 480px) {
+		input {
+			&[type="checkbox"], &[type="radio"] {
+				// border: 1px solid #cccccc;
+			}
+		}
+	}
+
+
+
+}
