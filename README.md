@@ -1,4 +1,4 @@
-[Gems/SASS](http://gos.gemy.me) | [Documentation](http://gos.gemy.me/docs)
+<a href="http://gos.gemy.me" target="_blank">Gems/SASS</a> | <a href="http://gos.gemy.me/docs" target="_blank">Documentation</a>
 ===
 
 Gems-Over-SASS is a small framework that helps you when you start coding up your Web Designs using a set
@@ -13,7 +13,7 @@ of **HAML**, **SASS**, and **Javascript** files and libraries to get the job don
 Download the stable release, or clone this repository:
 
 1. Download the latest stable release from
-   [gos.gemy.me](http://gos.gemy.me/).
+   <a href="http://gos.gemy.me" target="_blank">gos.gemy.me</a>.
 2. Clone this git repository — `git clone
    https://github.com/MohamedGamil/gos`.
 
