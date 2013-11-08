@@ -13,7 +13,11 @@
 @import 'gos-grid/grid-responsive-rtl';
 
 
-@if $enable_rtl	!= false {
+// /*
+//  * Enable RTL Grid System by changing the value of @variable-name `$theme-colors` to anything else than `false`
+//  * Defined in `./css/gos.css`
+//  */
+@if $enable-rtl	!= false {
 	@include gos-grid-rtl();
 	@include gos-grid-responsive-rtl();
 } @else {

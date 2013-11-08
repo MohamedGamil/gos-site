@@ -1458,19 +1458,6 @@ body.theme-blue .theme-bg-color {
 }
 
 /*
- * Theme Color "green"
- */
-body.theme-green {
-  color: #FFF;
-}
-body.theme-green .theme-text-color {
-  color: #89b435;
-}
-body.theme-green .theme-bg-color {
-  background-color: #89b435;
-}
-
-/*
  * jQuery Tipsy
  */
 .tipsy {

@@ -12,11 +12,10 @@
 // ==========================================================================
 $imgs           :   '../images/';                   // # Images Directory
 
-$enable_rtl     :   false;                          // # Enable RTL Grid ?
+$enable-rtl     :   false;                          // # Enable RTL Grid ?
 
 $theme-colors   :   orange #ea6045,                 // # Theme Multi-Colors => ( `Color Name` `Color HEX` )
-                    blue #067ab5,
-                    green #89b435;
+                    blue #067ab5;                   //   These are just SAMPLE colors.
 
 $theme-fonts    :   os 'Open Sans' helvetica,       // # Theme Fonts     => ( `Font Shorthand` `Font Family` `Backup Set Name` `Trailing Font Family` )
                     lato 'Lato' lucida-grande,      //   Avaliable Sets  => ( `helvetica`, `georgia`, `lucida-grande`, `monospace`, `verdana` )
