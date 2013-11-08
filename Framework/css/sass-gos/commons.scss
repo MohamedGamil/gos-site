@@ -333,3 +333,52 @@
 	}
 }
 
+
+
+// /*
+//  * Font
+//  * This @mixin is used as a helper to include `font-family` attribute more
+//  * easily when dealing with long font names.
+//  * 
+//  *
+//  * @Param 1	Font Shorthand
+//  * @Param 2	Use The White Set ( just pass anything otherwise than "null", like "true" )
+//  * @Example	@include bootstrap-icon( 'calendar' );
+//  */
+@mixin font( $font, $letters-fix : false ) {
+	
+	// Loop through each font
+	$font-sets	: helvetica $helvetica, georgia $georgia, lucida-grande $lucida-grande, monospace $monospace, verdana $verdana;
+	
+	@each $f in $theme-fonts {
+		$short  : unquote( nth( $f, 1 ) );
+		$family : nth( $f, 2 );
+		$set    : unquote( nth( $f, 3 ) );
+		
+		@if ( $font == $short ) {
+			
+			@if ( length( $f ) > 3 ) {
+				$family : $family, nth( $f, 4 );
+			}
+			
+			@each $s in $font-sets {
+				@if ( $set == unquote( nth( $s, 1 ) ) ) {
+					$set : nth( $s, 2 );
+				}
+			}
+			
+			font-family: $family, $set;
+		}
+	}
+	
+	// -- Letters Fix
+	//    This fixes letters space problem with some Arabic fonts. [Use With Caution]
+	@if( $letters-fix == true )
+	{
+		letter-spacing: -0.5px;
+		word-spacing: 2px;
+		white-space: nowrap; // Chrome FIX
+	}
+}
+
+

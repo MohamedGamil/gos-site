@@ -5,84 +5,21 @@
 
 // /*
 //  * ==========================================================================
-//  * Fonts
-//  * 
-//  * @Notice: Italic removed to speed up the website.
+//  * Base styles
 //  * ==========================================================================
 //  */
-
-// == Import Fonts
-@import 'font-face';
-
-// == Font Mixin
-@mixin font( $font, $letters-fix : false ) {
-	
-	// Open Sans
-	@if ( $font == os )
-	{
-		// font-family: "Open Sans", "Trebuchet MS", "Helvatica", "Verdana", "Arial", sans-serif;
-		font-family: "Open Sans", $helvetica;
-	}
-	
-	// Lato
-	@else if ( $font == lato )
-	{
-		// font-family: "Lato", "Trebuchet MS", "Helvatica", "Verdana", "Arial", sans-serif;
-		font-family: "Lato", $lucida-grande;
-	}
-	
-	// Droid Arabic Kufi
-	@else if ( $font == dk )
-	{
-		// font-family: "Droid Arabic Kufi", "Open Sans", "Trebuchet MS", "Helvatica", "Tahoma", "Arial", sans-serif;
-		font-family: "Droid Arabic Kufi", "Open Sans", $helvetica;
-	}
-	
-	// Droid Arabic Naskh
-	@else if ( $font == dn )
-	{
-		// font-family: "Droid Arabic Naskh", "Open Sans", "Trebuchet MS", "Helvatica", "Tahoma", "Arial", sans-serif;
-		font-family: "Droid Arabic Naskh", "Open Sans", $lucida-grande;
-	}
-	
-	// Arial
-	@else if ( $font == arial )
-	{
-		// font-family: "Arial", "Helvatica", "Verdana", sans-serif;
-		font-family: "Arial", $verdana;
-	}
-	
-	// Tahoma
-	@else if ( $font == tahoma )
-	{
-		// font-family: "Tahoma", "Arial", "Helvatica", "Verdana", sans-serif;
-		font-family: "Tahoma", "Arial", $verdana;
-	}
-	
-	// -- Letter Fix
-	//    This fixes letters space problem with Arabic fonts.
-	@if( $letters-fix == true )
-	{
-		letter-spacing: -0.5px;
-		word-spacing: 2px;
-		white-space: nowrap; // Chrome FIX
-	}
-}
-
-
-
-/*
- * ==========================================================================
- * Base styles
- * ==========================================================================
- */
 
 // == Remove text-shadow in selection highlight: h5bp.com/i
 //    These selection declarations have to be separate.
 //    Customize the background color to match your design.
-::-moz-selection, ::selection {
-	background: #b3d4fc;
-	text-shadow: none;
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
 }
 
 
@@ -105,21 +42,17 @@ a, a:visited, a:focus, a:hover {
 }
 
 
-// == Google Chromeframe
-.chromeframe {
-	margin: 0.2em 0;
-	background: #ccc;
-	color: #000;
-	padding: 0.2em 0;
-}
-
-
 // == HTML / Body
 html, body {
 	font-size: 1em;
-	line-height: 1.6;
+	line-height: 1.4;
 	overflow-x: hidden;
-	@include font( tahoma );
+	
+	@if ( $default-font ) {
+		@include font( $default-font );
+	} @else {
+		@include font( arial );
+	}
 }
 
 
@@ -145,6 +78,7 @@ textarea {
 input, textarea {
 	display: block;
 	outline: none;
+	color: #222;
 }
 
 input {
@@ -173,7 +107,7 @@ button {
 
 // == Paragraphs
 p {
-	line-height: 1.7;
+	line-height: 1.6;
 	
 	&:first-child {
 		margin-top: 0;
@@ -278,3 +212,28 @@ aside {
 	overflow: hidden;
 }
 
+
+
+// /*
+//  * ==========================================================================
+//  * Browse Happy prompt
+//  * ==========================================================================
+//  */
+
+
+.browsehappy {
+    margin: 0.2em 0;
+    padding: 0.4em 0.8em;
+    color: #222;
+    background: #CCC;
+	
+	a {
+		display: inline-block;
+		padding-bottom: 0.1em;
+		border-bottom: 1px dotted #999;
+		
+		&:hover {
+			border-bottom-color: #222;
+		}
+	}
+}

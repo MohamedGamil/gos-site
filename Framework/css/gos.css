@@ -5,186 +5,12 @@
  * @copyright	Gemy.me 2013 All Rights Reserved.
  * @license		MIT
  */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 300;
-  src: local("Open Sans Light"), local("OpenSans-Light"), url(fonts/opensans/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format("woff");
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Open Sans"), local("OpenSans"), url(fonts/opensans/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format("woff");
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 600;
-  src: local("Open Sans Semibold"), local("OpenSans-Semibold"), url(fonts/opensans/MTP_ySUJH_bn48VBG8sNSnhCUOGz7vYGh680lGh-uXM.woff) format("woff");
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local("Open Sans Bold"), local("OpenSans-Bold"), url(fonts/opensans/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format("woff");
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 800;
-  src: local("Open Sans Extrabold"), local("OpenSans-Extrabold"), url(fonts/opensans/EInbV5DfGHOiMmvb1Xr-hnhCUOGz7vYGh680lGh-uXM.woff) format("woff");
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 300;
-  src: local("Open Sans Light Italic"), local("OpenSansLight-Italic"), url(fonts/opensans/PRmiXeptR36kaC0GEAetxh_xHqYgAV9Bl_ZQbYUxnQU.woff) format("woff");
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 400;
-  src: local("Open Sans Italic"), local("OpenSans-Italic"), url(fonts/opensans/xjAJXh38I15wypJXxuGMBobN6UDyHWBl620a-IRfuBk.woff) format("woff");
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 600;
-  src: local("Open Sans Semibold Italic"), local("OpenSans-SemiboldItalic"), url(fonts/opensans/PRmiXeptR36kaC0GEAetxn5HxGBcBvicCpTp6spHfNo.woff) format("woff");
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 700;
-  src: local("Open Sans Bold Italic"), local("OpenSans-BoldItalic"), url(fonts/opensans/PRmiXeptR36kaC0GEAetxjqR_3kx9_hJXbbyU8S6IN0.woff) format("woff");
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 800;
-  src: local("Open Sans Extrabold Italic"), local("OpenSans-ExtraboldItalic"), url(fonts/opensans/PRmiXeptR36kaC0GEAetxkCDe67GEgBv_HnyvHTfdew.woff) format("woff");
-}
-
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 100;
-  src: local("Lato Hairline"), local("Lato-Hairline"), url(fonts/lato/boeCNmOCCh-EWFLSfVffDg.woff) format("woff");
-}
-
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 300;
-  src: local("Lato Light"), local("Lato-Light"), url(fonts/lato/KT3KS9Aol4WfR6Vas8kNcg.woff) format("woff");
-}
-
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Lato Regular"), local("Lato-Regular"), url(fonts/lato/9k-RPmcnxYEPm8CNFsH2gg.woff) format("woff");
-}
-
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  src: local("Lato Bold"), local("Lato-Bold"), url(fonts/lato/wkfQbvfT_02e2IWO3yYueQ.woff) format("woff");
-}
-
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 900;
-  src: local("Lato Black"), local("Lato-Black"), url(fonts/lato/BVtM30trf7q_jfqYeHfjtA.woff) format("woff");
-}
-
-/*
-@font-face {
-	font-family: 'Lato';
-	font-style: italic;
-	font-weight: 100;
-	src: local('Lato Hairline Italic'), local('Lato-HairlineItalic'), url(fonts/lato/CggrdU0t5c42NcNxN-VM3_esZW2xOQ-xsNqO47m55DA.woff) format('woff');
-}
-
-@font-face {
-	font-family: 'Lato';
-	font-style: italic;
-	font-weight: 300;
-	src: local('Lato Light Italic'), local('Lato-LightItalic'), url(fonts/lato/2HG_tEPiQ4Z6795cGfdivD8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
-}
-
-@font-face {
-	font-family: 'Lato';
-	font-style: italic;
-	font-weight: 400;
-	src: local('Lato Italic'), local('Lato-Italic'), url(fonts/lato/oUan5VrEkpzIazlUe5ieaA.woff) format('woff');
-}
-
-@font-face {
-	font-family: 'Lato';
-	font-style: italic;
-	font-weight: 700;
-	src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(fonts/lato/HkF_qI1x_noxlxhrhMQYED8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
-}
-
-@font-face {
-	font-family: 'Lato';
-	font-style: italic;
-	font-weight: 900;
-	src: local('Lato Black Italic'), local('Lato-BlackItalic'), url(fonts/lato/VNUH7ZAcagYBWsAiBBCEYz8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
-}
-*/
-/*
-@font-face {
-  font-family: 'Droid Arabic Kufi';
-  font-style: normal;
-  font-weight: 400;
-  src: url(fonts/droidkufi/DroidKufi-Regular.eot);
-  src: url(fonts/droidkufi/DroidKufi-Regular.eot?#iefix) format('embedded-opentype'),
-       url(fonts/droidkufi/DroidKufi-Regular.woff2) format('woff2'),
-       url(fonts/droidkufi/DroidKufi-Regular.woff) format('woff'),
-       url(fonts/droidkufi/DroidKufi-Regular.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Droid Arabic Kufi';
-  font-style: normal;
-  font-weight: 700;
-  src: url(fonts/droidkufi/DroidKufi-Bold.eot);
-  src: url(fonts/droidkufi/DroidKufi-Bold.eot?#iefix) format('embedded-opentype'),
-       url(fonts/droidkufi/DroidKufi-Bold.woff2) format('woff2'),
-       url(fonts/droidkufi/DroidKufi-Bold.woff) format('woff'),
-       url(fonts/droidkufi/DroidKufi-Bold.ttf) format('truetype');
-}
-
-@font-face {
-    font-family: "Droid Arabic Naskh";
-    font-style: normal;
-    font-weight: 400;
-    src: url("fonts/droidnaskh/DroidNaskh-Regular.eot?#iefix") format("embedded-opentype"),
-		 url("fonts/droidnaskh/DroidNaskh-Regular.woff2") format("x-woff2"),
-		 url("fonts/droidnaskh/DroidNaskh-Regular.woff") format("woff"),
-		 url("fonts/droidnaskh/DroidNaskh-Regular.ttf") format("truetype");
-}
-*/
-/*
- * ==========================================================================
- * Base styles
- * ==========================================================================
- */
-::-moz-selection, ::selection {
+::selection {
   background: #b3d4fc;
   text-shadow: none;
 }
@@ -203,18 +29,11 @@ a, a:visited, a:focus, a:hover {
   text-decoration: none;
 }
 
-.chromeframe {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-
 html, body {
   font-size: 1em;
-  line-height: 1.6;
+  line-height: 1.4;
   overflow-x: hidden;
-  font-family: "Tahoma", "Arial", Verdana, Geneva, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body.theme-rtl {
@@ -234,6 +53,7 @@ textarea {
 input, textarea {
   display: block;
   outline: none;
+  color: #222;
 }
 
 input[type="checkbox"], input[type="radio"], input[type="submit"] {
@@ -287,7 +107,7 @@ h5:first-child {
 }
 
 p {
-  line-height: 1.7;
+  line-height: 1.6;
 }
 p:first-child {
   margin-top: 0;
@@ -373,6 +193,21 @@ aside .block:last-child {
 
 .oh {
   overflow: hidden;
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  padding: 0.4em 0.8em;
+  color: #222;
+  background: #CCC;
+}
+.browsehappy a {
+  display: inline-block;
+  padding-bottom: 0.1em;
+  border-bottom: 1px dotted #999;
+}
+.browsehappy a:hover {
+  border-bottom-color: #222;
 }
 
 /*
@@ -1384,14 +1219,184 @@ body.theme-rtl a.btn {
 /**
  * Anything less than ( 480px ).
  */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Open Sans Light"), local("OpenSans-Light"), url(fonts/opensans/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans"), local("OpenSans"), url(fonts/opensans/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local("Open Sans Semibold"), local("OpenSans-Semibold"), url(fonts/opensans/MTP_ySUJH_bn48VBG8sNSnhCUOGz7vYGh680lGh-uXM.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url(fonts/opensans/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: local("Open Sans Extrabold"), local("OpenSans-Extrabold"), url(fonts/opensans/EInbV5DfGHOiMmvb1Xr-hnhCUOGz7vYGh680lGh-uXM.woff) format("woff");
+}
+
+/*
+@font-face {
+	font-family: 'Open Sans';
+	font-style: italic;
+	font-weight: 300;
+	src: local('Open Sans Light Italic'), local('OpenSansLight-Italic'), url(fonts/opensans/PRmiXeptR36kaC0GEAetxh_xHqYgAV9Bl_ZQbYUxnQU.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	font-style: italic;
+	font-weight: 400;
+	src: local('Open Sans Italic'), local('OpenSans-Italic'), url(fonts/opensans/xjAJXh38I15wypJXxuGMBobN6UDyHWBl620a-IRfuBk.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	font-style: italic;
+	font-weight: 600;
+	src: local('Open Sans Semibold Italic'), local('OpenSans-SemiboldItalic'), url(fonts/opensans/PRmiXeptR36kaC0GEAetxn5HxGBcBvicCpTp6spHfNo.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	font-style: italic;
+	font-weight: 700;
+	src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(fonts/opensans/PRmiXeptR36kaC0GEAetxjqR_3kx9_hJXbbyU8S6IN0.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	font-style: italic;
+	font-weight: 800;
+	src: local('Open Sans Extrabold Italic'), local('OpenSans-ExtraboldItalic'), url(fonts/opensans/PRmiXeptR36kaC0GEAetxkCDe67GEgBv_HnyvHTfdew.woff) format('woff');
+}
+*/
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 100;
+  src: local("Lato Hairline"), local("Lato-Hairline"), url(fonts/lato/boeCNmOCCh-EWFLSfVffDg.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Lato Light"), local("Lato-Light"), url(fonts/lato/KT3KS9Aol4WfR6Vas8kNcg.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Lato Regular"), local("Lato-Regular"), url(fonts/lato/9k-RPmcnxYEPm8CNFsH2gg.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Lato Bold"), local("Lato-Bold"), url(fonts/lato/wkfQbvfT_02e2IWO3yYueQ.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 900;
+  src: local("Lato Black"), local("Lato-Black"), url(fonts/lato/BVtM30trf7q_jfqYeHfjtA.woff) format("woff");
+}
+
+/*
+@font-face {
+	font-family: 'Lato';
+	font-style: italic;
+	font-weight: 100;
+	src: local('Lato Hairline Italic'), local('Lato-HairlineItalic'), url(fonts/lato/CggrdU0t5c42NcNxN-VM3_esZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Lato';
+	font-style: italic;
+	font-weight: 300;
+	src: local('Lato Light Italic'), local('Lato-LightItalic'), url(fonts/lato/2HG_tEPiQ4Z6795cGfdivD8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Lato';
+	font-style: italic;
+	font-weight: 400;
+	src: local('Lato Italic'), local('Lato-Italic'), url(fonts/lato/oUan5VrEkpzIazlUe5ieaA.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Lato';
+	font-style: italic;
+	font-weight: 700;
+	src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(fonts/lato/HkF_qI1x_noxlxhrhMQYED8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Lato';
+	font-style: italic;
+	font-weight: 900;
+	src: local('Lato Black Italic'), local('Lato-BlackItalic'), url(fonts/lato/VNUH7ZAcagYBWsAiBBCEYz8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+*/
+/*
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/droidkufi/DroidKufi-Regular.eot);
+  src: url(fonts/droidkufi/DroidKufi-Regular.eot?#iefix) format('embedded-opentype'),
+       url(fonts/droidkufi/DroidKufi-Regular.woff2) format('woff2'),
+       url(fonts/droidkufi/DroidKufi-Regular.woff) format('woff'),
+       url(fonts/droidkufi/DroidKufi-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  font-weight: 700;
+  src: url(fonts/droidkufi/DroidKufi-Bold.eot);
+  src: url(fonts/droidkufi/DroidKufi-Bold.eot?#iefix) format('embedded-opentype'),
+       url(fonts/droidkufi/DroidKufi-Bold.woff2) format('woff2'),
+       url(fonts/droidkufi/DroidKufi-Bold.woff) format('woff'),
+       url(fonts/droidkufi/DroidKufi-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "Droid Arabic Naskh";
+    font-style: normal;
+    font-weight: 400;
+    src: url("fonts/droidnaskh/DroidNaskh-Regular.eot?#iefix") format("embedded-opentype"),
+		 url("fonts/droidnaskh/DroidNaskh-Regular.woff2") format("x-woff2"),
+		 url("fonts/droidnaskh/DroidNaskh-Regular.woff") format("woff"),
+		 url("fonts/droidnaskh/DroidNaskh-Regular.ttf") format("truetype");
+}
+*/
 /* ==========================================================================
    Body
    ========================================================================== */
-body {
-  color: #666;
-  background: #FFF;
-}
-
 /* ==========================================================================
    HEADER
    ========================================================================== */

@@ -43,6 +43,13 @@
 	%body
 		\
 		
+		/[if lt IE 8]
+			%p.browsehappy
+				You are using an 
+				%strong outdated 
+				browser. Please 
+				%a{:href => 'http://browsehappy.com/'} upgrade your browser
+				to improve your experience.
 		
 		%header#main-header
 		//Header
@@ -50,6 +57,9 @@
 		
 		
 		%div{:role => 'main'}
+			%div
+				.container
+					%p Hello World!
 		//Content
 		\
 		
