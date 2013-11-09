@@ -25,12 +25,12 @@ a.btn {
 	z-index: 3;
 	@include font( lato );
 	
-	&, &:after {
+	&, &.shadow:after {
 		@include transition( 0.3s );
 		@include border-radius( 3px );
 	}
 	
-	&:after {
+	&.shadow:after {
 		content: "";
 		position: absolute;
 		width: 100%;
@@ -44,7 +44,7 @@ a.btn {
 	&:hover {
 		background: #111;
 		
-		&:after {
+		&.shadow:after {
 			background: #555;
 		}
 	}
@@ -61,7 +61,8 @@ a.btn {
 	
 	$btn_colors	: 
 	(
-		primary #23d36d #1aa253,
+		// primary #23d36d #1aa253,
+		green #23d36d #1aa253,
 		orange #da5b42 #a03e2b,
 		// blue #6ACEEB #277C93,
 		blue #04BDBD #077F7F,
@@ -76,14 +77,14 @@ a.btn {
 		&.#{$class} {
 			background: darken( $border, 5% );
 			
-			&:after {
+			&.shadow:after {
 				background: darken( $bg, 10% );
 			}
 			
 			&:hover {
 				background: $border;
 				
-				&:after {
+				&.shadow:after {
 					background: $bg;
 				}
 			}
