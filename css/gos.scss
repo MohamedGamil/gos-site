@@ -1,0 +1,47 @@
+/*
+ * Site Styling Sheet.
+ * - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ * @author		Gemy.me, <www.gemy.me>.
+ * @copyright	Gemy.me 2013 All Rights Reserved.
+ * @license		MIT
+ */
+
+
+// ==========================================================================
+// Configuration
+// ==========================================================================
+$imgs           :   '../images/';                   // # Images Directory
+
+$enable-rtl     :   false;                          // # Enable RTL Grid ?
+
+$theme-colors   :   orange #ea6045,                 // # Theme Multi-Colors => ( `Color Name` `Color HEX` )
+                    blue #067ab5;                   //   These are just SAMPLE colors.
+
+$theme-fonts    :   os 'Open Sans' helvetica,       // # Theme Fonts     => ( `Font Shorthand` `Font Family` `Backup Set Name` `Trailing Font Family` )
+                    lato 'Lato' lucida-grande,      //   Avaliable Sets  => ( `helvetica`, `georgia`, `lucida-grande`, `monospace`, `verdana` )
+                    dk 'Droid Arabic Kufi' helvetica 'Open Sans',
+                    dn 'Droid Arabic Naskh' lucida-grande 'Open Sans',
+                    arial 'Arial' verdana,
+                    tahoma 'Tahoma' verdana 'Arial';
+
+$default-font   :   os;                             // # Default Body/HTML Tags Font Family ( Type Only Font's Shorthand )
+
+
+// ==========================================================================
+// Includes
+// ==========================================================================
+@import 'sass-gos/includes';
+
+
+
+// ==========================================================================
+// User Styles
+// ==========================================================================
+@import 'sass-user/font-face';
+@import 'sass-user/base';
+@import 'sass-user/header';
+@import 'sass-user/content';
+@import 'sass-user/footer';
+@import 'sass-user/theme-colors';
+@import 'sass-user/responsive';
+@import 'sass-user/plugins';

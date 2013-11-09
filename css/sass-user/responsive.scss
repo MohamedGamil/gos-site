@@ -1,0 +1,30 @@
+// /*
+//  * Theme Responsive Styles
+//  * Feel free to customize any of the Break Points below.
+//  * 
+//  * If you don't know how to determine Design's Breakpoints; Read this Article: http://goo.gl/3VRBz8
+//  * To learn more about implementing Highly Effective Media Queries; Read this Article: http://goo.gl/qsGcKW
+//  * And Remember to use EMs instead of Pixels; Read this Article to know why: http://goo.gl/3FcnlW
+//  */
+
+
+
+// = Wide Screens ( 1200px = 75em ) ( 1170px Grid System )
+@media (min-width: 75em) {
+}
+
+// = Desktop min-width: ( 768px = 48em ), and max-width : ( 1024px = 64em )
+@media only screen and (min-width: 48em) and (max-width: 64em) {
+}
+
+// = ( 768px = 48em | 979px = 61.1875em )
+@media (min-width: 48em) and (max-width: 61.1875em) {
+}
+
+// = ( 767px = 47.9375em )
+@media (max-width: 47.9375em) {
+}
+
+// = Anything less than ( 480px = 30em )
+@media (max-width: 30em) {
+}

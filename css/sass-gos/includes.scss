@@ -1,0 +1,26 @@
+// ==========================================================================
+// SASS Libraries, Commons, and Config
+// ==========================================================================
+@import 'bourbon/bourbon';
+
+@import 'commons';
+@import 'gos-styling/base-styling';
+@import 'gos-styling/pre-styling';
+
+@import 'gos-grid/grid';
+@import 'gos-grid/grid-responsive';
+@import 'gos-grid/grid-rtl';
+@import 'gos-grid/grid-responsive-rtl';
+
+
+// /*
+//  * Enable RTL Grid System by changing the value of @variable-name `$theme-colors` to anything else than `false`
+//  * Defined in `./css/gos.css`
+//  */
+@if $enable-rtl	!= false {
+	@include gos-grid-rtl();
+	@include gos-grid-responsive-rtl();
+} @else {
+	@include gos-grid();
+	@include gos-grid-responsive();
+}
