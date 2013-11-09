@@ -244,7 +244,7 @@ a.btn {
   position: relative;
   display: inline-block;
   vertical-align: top;
-  padding: 10px 14px;
+  padding: 10px 14px 7px;
   color: #FFF;
   font-size: 14px;
   font-weight: normal;
@@ -255,7 +255,7 @@ a.btn {
   z-index: 3;
   font-family: "Lato", "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
 }
-a.btn, a.btn:after {
+a.btn, a.btn.shadow:after {
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   transition: 0.3s;
@@ -264,7 +264,10 @@ a.btn, a.btn:after {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-a.btn:after {
+a.btn.shadow {
+  padding-bottom: 10px;
+}
+a.btn.shadow:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -277,7 +280,7 @@ a.btn:after {
 a.btn:hover {
   background: #111;
 }
-a.btn:hover:after {
+a.btn:hover.shadow:after {
   background: #555;
 }
 a.btn.primary {
@@ -288,52 +291,52 @@ a.btn.primary {
 a.btn.primary:hover {
   color: #FFF;
 }
-a.btn.primary {
+a.btn.green {
   background: #168c48;
 }
-a.btn.primary:after {
+a.btn.green.shadow:after {
   background: #1ca756;
 }
-a.btn.primary:hover {
+a.btn.green:hover {
   background: #1aa253;
 }
-a.btn.primary:hover:after {
+a.btn.green:hover.shadow:after {
   background: #23d36d;
 }
 a.btn.orange {
   background: #8c3626;
 }
-a.btn.orange:after {
+a.btn.orange.shadow:after {
   background: #c34026;
 }
 a.btn.orange:hover {
   background: #a03e2b;
 }
-a.btn.orange:hover:after {
+a.btn.orange:hover.shadow:after {
   background: #da5b42;
 }
 a.btn.blue {
   background: #066767;
 }
-a.btn.blue:after {
+a.btn.blue.shadow:after {
   background: #038b8b;
 }
 a.btn.blue:hover {
   background: #077f7f;
 }
-a.btn.blue:hover:after {
+a.btn.blue:hover.shadow:after {
   background: #04bdbd;
 }
 a.btn.red {
   background: #721526;
 }
-a.btn.red:after {
+a.btn.red.shadow:after {
   background: #931e33;
 }
 a.btn.red:hover {
   background: #88192d;
 }
-a.btn.red:hover:after {
+a.btn.red:hover.shadow:after {
   background: #bd2742;
 }
 
