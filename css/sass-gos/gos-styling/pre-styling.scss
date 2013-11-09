@@ -14,7 +14,7 @@ a.btn {
 	position: relative;
 	display: inline-block;
 	vertical-align: top;
-	padding: 10px 14px;
+	padding: 10px 14px 7px;
 	color: #FFF;
 	font-size: 14px;
 	font-weight: normal; // More Smooth
@@ -28,6 +28,10 @@ a.btn {
 	&, &.shadow:after {
 		@include transition( 0.3s );
 		@include border-radius( 3px );
+	}
+	
+	&.shadow {
+		padding-bottom: 10px;
 	}
 	
 	&.shadow:after {
