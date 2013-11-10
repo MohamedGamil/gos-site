@@ -2630,6 +2630,160 @@ body.theme-blue .theme-bg-color {
   background-color: #067ab5;
 }
 
+@media (min-width: 48em) and (max-width: 61.1875em) {
+  div[role="main"] .why-use .features .item h3 {
+    margin-top: 20px;
+  }
+  div[role="main"] .why-use .features .item i {
+    width: 99px;
+    height: 108px;
+    background-size: 99px auto;
+  }
+  div[role="main"] .why-use .features .item.bourbon i {
+    background-position: 0 0px;
+  }
+  div[role="main"] .why-use .features .item.h5bp i {
+    background-position: 0 -108px;
+  }
+  div[role="main"] .why-use .features .item.sass i {
+    background-position: 0 -216px;
+  }
+  div[role="main"] .why-use .features .item.onefile i {
+    background-position: 0 -324px;
+  }
+  div[role="main"] .why-use .features .item.multicolor i {
+    background-position: 0 -432px;
+  }
+  div[role="main"] .why-use .features .item.rtlsupport i {
+    background-position: 0 -540px;
+  }
+  div[role="main"] .why-use .features .item.webfonts i {
+    background-position: 0 -648px;
+  }
+}
+@media (max-width: 47.9375em) {
+  header#main-header .col-4 {
+    float: left;
+    width: auto;
+  }
+  header#main-header .col-8 {
+    float: right;
+    width: auto;
+  }
+  header#main-header .logo {
+    padding-left: 10px;
+  }
+  header#main-header .iconed-links a {
+    margin-left: 5px;
+  }
+  header#main-header .menu {
+    margin-right: 1.5em;
+  }
+  header#main-header .menu span.separator, header#main-header .menu a.menu-icon {
+    margin-left: 15px;
+  }
+
+  div[role="main"] .hero-unit p {
+    padding: 0 1em;
+  }
+  div[role="main"] .why-use .features {
+    padding-top: 50px;
+  }
+  div[role="main"] .why-use .features .item {
+    margin-top: 0 !important;
+    margin-bottom: 1.25em;
+    padding-bottom: 1.25em;
+    border-bottom: 1px solid #E2E2E2;
+  }
+  div[role="main"] .why-use .features .item h3 {
+    margin-top: 20px;
+  }
+  div[role="main"] .why-use .features .item i {
+    width: 99px;
+    height: 108px;
+    background-size: 99px auto;
+  }
+  div[role="main"] .why-use .features .item.bourbon i {
+    background-position: 0 0px;
+  }
+  div[role="main"] .why-use .features .item.h5bp i {
+    background-position: 0 -108px;
+  }
+  div[role="main"] .why-use .features .item.sass i {
+    background-position: 0 -216px;
+  }
+  div[role="main"] .why-use .features .item.onefile i {
+    background-position: 0 -324px;
+  }
+  div[role="main"] .why-use .features .item.multicolor i {
+    background-position: 0 -432px;
+  }
+  div[role="main"] .why-use .features .item.rtlsupport i {
+    background-position: 0 -540px;
+  }
+  div[role="main"] .why-use .features .item.webfonts i {
+    background-position: 0 -648px;
+  }
+}
+@media (max-width: 30em) {
+  header#main-header {
+    position: static;
+    height: 180px;
+  }
+  header#main-header .col-6, header#main-header .col-4 {
+    float: none;
+  }
+  header#main-header .logo {
+    text-align: center;
+    padding: 20px 0;
+  }
+  header#main-header .logo a {
+    display: inline-block;
+  }
+  header#main-header .menu {
+    padding-right: 15px;
+  }
+  header#main-header .menu span.separator {
+    margin-left: 20px;
+  }
+  header#main-header .menu .menu-links {
+    right: -14px;
+  }
+  header#main-header .menu .menu-links:before {
+    right: 56px;
+  }
+  header#main-header.resized {
+    height: 180px;
+  }
+  header#main-header.resized .logo a {
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+  }
+  header#main-header.resized .iconed-links {
+    margin-top: 30px;
+  }
+  header#main-header.resized .menu span.separator {
+    margin-top: 35px;
+  }
+  header#main-header.resized .menu a.menu-icon {
+    margin-top: 38px;
+  }
+  header#main-header.resized .menu .meun-links {
+    top: 120px;
+  }
+
+  div[role="main"] {
+    padding-top: 0;
+  }
+
+  .buttons a.btn.icn {
+    display: block;
+    margin: 0 10px 15px;
+  }
+}
 /*
  * jQuery Tipsy
  */

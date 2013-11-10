@@ -15,16 +15,177 @@
 
 // = Desktop min-width: ( 768px = 48em ), and max-width : ( 1024px = 64em )
 @media only screen and (min-width: 48em) and (max-width: 64em) {
+	
 }
 
 // = ( 768px = 48em | 979px = 61.1875em )
 @media (min-width: 48em) and (max-width: 61.1875em) {
+	
+	div[role="main"] .why-use .features .item {
+		
+		h3 {
+			margin-top: 20px;
+		}
+		
+		i {
+			width: 99px;
+			height: 108px;
+			background-size: 99px auto;
+		}
+		
+		$bgamount  : 0px;
+		$bgcounter : -1;
+		@each $classname in ( bourbon h5bp sass onefile multicolor rtlsupport webfonts ) {
+			&.#{$classname} i {
+				$bgamount  :  -108 + ( -108px *  $bgcounter );
+				$bgcounter : $bgcounter + 1;
+				background-position: 0 $bgamount;
+			}
+		}
+	}
 }
 
 // = ( 767px = 47.9375em )
 @media (max-width: 47.9375em) {
+	
+	header#main-header {
+		
+		.col-4 {
+			float: left;
+			width: auto;
+		}
+		
+		.col-8 {
+			float: right;
+			width: auto;
+		}
+		
+		.logo {
+			padding-left: 10px;
+		}
+		
+		.iconed-links a {
+			margin-left: 5px;
+		}
+		
+		.menu {
+			margin-right: 1.5em;
+			
+			span.separator, a.menu-icon {
+				margin-left: 15px;
+			}
+		}
+	}
+	
+	div[role="main"] {
+		
+		.hero-unit p {
+			padding: 0 1em;
+		}
+		
+		.why-use .features {
+			padding-top: 50px;
+			
+			.item {
+				margin-top: 0 !important;
+				margin-bottom: 1.25em;
+				padding-bottom: 1.25em;
+				border-bottom: 1px solid #E2E2E2;
+				
+				h3 {
+					margin-top: 20px;
+				}
+				
+				i {
+					width: 99px;
+					height: 108px;
+					background-size: 99px auto;
+				}
+				
+				$bgamount  : 0px;
+				$bgcounter : -1;
+				@each $classname in ( bourbon h5bp sass onefile multicolor rtlsupport webfonts ) {
+					&.#{$classname} i {
+						$bgamount  :  -108 + ( -108px *  $bgcounter );
+						$bgcounter : $bgcounter + 1;
+						background-position: 0 $bgamount;
+					}
+				}
+			}
+		}
+	}
 }
 
 // = Anything less than ( 480px = 30em )
 @media (max-width: 30em) {
+	
+	header#main-header {
+		position: static;
+		height: 180px;
+		
+		.col-6, .col-4 {
+			float: none;
+		}
+		
+		.logo {
+			text-align: center;
+			padding: 20px 0;
+			
+			a {
+				display: inline-block;
+			}
+		}
+		
+		.menu {
+			padding-right: 15px;
+			
+			span.separator {
+				margin-left: 20px;
+			}
+			
+			.menu-links {
+				right: -14px;
+				
+				&:before {
+					right: 56px;
+				}
+			}
+		}
+		
+		&.resized {
+			height: 180px;
+			
+			.logo a {
+				@include transform( none );
+			}
+			
+			.iconed-links {
+				margin-top: 30px;
+			}
+			
+			.menu {
+				
+				span.separator {
+					margin-top: 35px;
+				}
+				
+				a.menu-icon {
+					margin-top: 38px;
+				}
+				
+				.meun-links {
+					top: 120px;
+				}
+			}
+		}
+	}
+	
+	div[role="main"] {
+		padding-top: 0;
+	}
+	
+	.buttons a.btn.icn {
+		display: block;
+		margin: 0 10px 15px;
+	}
 }
