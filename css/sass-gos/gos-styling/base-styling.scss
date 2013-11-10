@@ -242,13 +242,15 @@ aside {
 }
 
 
-// == RTL Direction
+// == RTL / LTR Direction
+.dir-ltr, .dir-ltr {
+	display: inline-block;
+}
+
 .dir-rtl {
 	direction: rtl;
 }
 
-
-// == LTR Direction
 .dir-ltr {
 	direction: ltr;
 }
