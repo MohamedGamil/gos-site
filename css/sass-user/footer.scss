@@ -2,4 +2,110 @@
    FOOTER
    ========================================================================== */
 footer#main-footer {
+	
+	a#scroll-to-top, a#change-language {
+		background: #333;
+		@include position( fixed, 0 2em -28px 0 );
+		@include border-radius( 3px 3px 0 0 );
+		@include transition( 0.3s );
+		@include opacity( 0.66 );
+		
+		&:hover {
+			@include opacity( 1 );
+		}
+	}
+	
+	a#scroll-to-top {
+		width: 24px;
+		height: 24px;
+		z-index: 1;
+		
+		&.active {
+			bottom: 0;
+		}
+		
+		&:after {
+			content: "";
+			z-index: 1;
+			@include position( absolute, 5px 0 0 5px );
+			@include bootstrap-icon( 'chevron-up', true );
+		}
+	}
+	
+	a#change-language {
+		padding: 0.125rem 1rem 0.25rem;
+		bottom: 0;
+		right: 4.75em;
+		color: #FFF;
+		font-size: 0.8em;
+		@include font( tahoma );
+		
+		&.active {
+			bottom: -28px;
+		}
+	}
+	
+	.buttons {
+		margin-top: 26px;
+		text-align: center;
+		
+		a {
+			display: inline-block;
+		}
+	}
+	
+	.social-links {
+		margin-top: 112px;
+		text-align: center;
+		
+		li {
+			display: inline;
+		}
+		
+		a {
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			margin: 0 2px;
+			background: url( $imgs + 'shared/social-links.png' ) no-repeat;
+			@include transition( 0.3s );
+			@include opacity( 0.33 );
+			
+			&:hover {
+				@include opacity( 1 );
+			}
+			
+			&.github {
+				background-position: 0 0;
+			}
+			&.twitter {
+				background-position: 0 -24px;
+			}
+			&.facebook {
+				background-position: 0 -48px;
+			}
+		}
+	}
+	
+	.copyrights {
+		padding: 30px 0;
+		text-align: center;
+		
+		p {
+			color: #666;
+			
+			a {
+				display: inline-block;
+				vertical-align: middle;
+				color: #02a779;
+				padding-bottom: 2px;
+				border-bottom: 1px dotted transparent;
+				@include transition( 0.3s );
+				
+				&:hover {
+					border-color: #02a779;
+				}
+			}
+		}
+	}
 }

@@ -8,12 +8,12 @@
   <!--<![endif]-->
   
   <head>
-    <title>Page Title</title>
+    <title>Gems/Sass Frontend Framework</title>
     <meta charset='utf-8'>
     <meta content='width=device-width,initial-scale=1' name='viewport'>
     <link href='css/reset.css' rel='stylesheet' type='text/css'>
     <link href='css/jquery-ui.css' rel='stylesheet' type='text/css'>
-    <link href='css/gos.css' rel='stylesheet' type='text/css'>
+    <link href='css/main.css' rel='stylesheet' type='text/css'>
     <script src='js/vendor/jquery-1.9.1.min.js' type='text/javascript'></script>
     <script src='js/vendor/modernizr-2.6.2.min.js' type='text/javascript'></script>
     <!--
@@ -46,19 +46,213 @@
         to improve your experience.
       </p>
     <![endif]-->
-    <header id='main-header'></header>
+    <header class='cf' id='main-header'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-4'>
+            <div class='logo'>
+              <a href='#' title='Gems/Sass'>
+                <img alt='Gems/Sass' src='images/shared/logo.png'>
+              </a>
+            </div>
+          </div>
+          <div class='col-8'>
+            <div class='menu' id='main-menu'>
+              <span class='separator'></span>
+              <a class='menu-icon' href='#' title='Open Navigation Menu'></a>
+              <div class='menu-links'>
+                <ul class='rr'>
+                  <li>
+                    <a class='home' href='#'>Homepage</a>
+                  </li>
+                  <li>
+                    <a class='docs' href='#'>Documentation</a>
+                  </li>
+                  <li>
+                    <a class='report' href='#'>Report Issues / Propose Feature</a>
+                  </li>
+                  <li>
+                    <a class='author' href='#'>About The Author</a>
+                  </li>
+                  <li>
+                    <a class='contact' href='#'>Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class='iconed-links'>
+              <ul class='rr'>
+                <li>
+                  <a class='gemy' href='#' title='Gemy.me Homepage'></a>
+                </li>
+                <li>
+                  <a class='github' href='#' title='Project Repository on Github'></a>
+                </li>
+                <li>
+                  <a class='docs' href='#' title='Gems/Sass Documentation'></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
     <!-- /Header -->
     
     <div role='main'>
-      <div>
+      
+      <section class='hero-unit cf'>
         <div class='container'>
-          <p>Hello World!</p>
+          <div class='row'>
+            <h1>What?</h1>
+            <p class='col-8 offset-2'>
+              Gems/Sass —
+              <i>Gems Over Sass</i>
+              — or
+              <i>GOS</i>
+              is a simple Micro-Framework that helps you when you start coding up your Web Designs; using a set of collected and implemented
+              <strong>Haml</strong>
+              ,
+              <strong>Sass</strong>
+              , and
+              <strong>Javascript</strong>
+              open-source files and libraries to get the job done faster and easier.
+            </p>
+            <div class='clear'></div>
+            <p class='col-8 offset-2'>
+              It’s based on
+              <strong>HTML 5 Boilerplate</strong>
+              , and powered by Sass. Plus tons of other features that will help you develop impressive Web Applications.
+            </p>
+            <div class='clear'></div>
+            <div class='buttons col-6 offset-3'>
+              <a class='btn icn primary green2 download' href='#'>Download v1.x.x</a>
+              <a class='btn icn primary black2 docs' href='#'>Documentation</a>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+      <!-- /Hero Unit -->
+      
+      
+      <section class='why-use cf'>
+        <div class='container'>
+          <div class='row'>
+            <div class='col-12'>
+              <h2 class='heading'>Why ?</h2>
+            </div>
+            <div class='clear'></div>
+            <div class='features'>
+              <div class='top-row cf'>
+                <div class='col-4'>
+                  <div class='item side left bourbon'>
+                    <a href='#'>
+                      <i></i>
+                      <h3>Strengthened by Bourbon</h3>
+                    </a>
+                    <p>The beautiful, simple and lightweight mixin library for Sass.</p>
+                  </div>
+                </div>
+                <div class='col-4'>
+                  <div class='item center h5bp'>
+                    <a href='#'>
+                      <i></i>
+                      <h3>HTML 5 Boilerplate</h3>
+                    </a>
+                    <p>The base styles of the Framework is based on HTML5 Boilerplate; the most popular Frontend Template on the Web.</p>
+                  </div>
+                </div>
+                <div class='col-4'>
+                  <div class='item side right sass'>
+                    <a href='#'>
+                      <i></i>
+                      <h3>Powered by Sass</h3>
+                    </a>
+                    <p>It has been established that SASS is the most mature and powerful CSS extension to date.</p>
+                  </div>
+                </div>
+              </div>
+              <div class='middle-row cf'>
+                <div class='col-4 offset-4'>
+                  <div class='item center onefile'>
+                    <i></i>
+                    <h3>1 Site in 1 File</h3>
+                    <p>Build all of your final CSS into 1 file. For even faster performance.</p>
+                  </div>
+                </div>
+              </div>
+              <div class='bottom-row cf'>
+                <div class='col-4'>
+                  <div class='item side left multicolor'>
+                    <i></i>
+                    <h3>Multi-Colored Templates</h3>
+                    <p>Just define your class names and the color HEX values and you’re good to go.</p>
+                  </div>
+                </div>
+                <div class='col-4'>
+                  <div class='item center rtlsupport'>
+                    <i></i>
+                    <h3>RTL Support</h3>
+                    <p>Implement your RTL styles effortlessly. Aside from the bundled RTL grid system.</p>
+                  </div>
+                </div>
+                <div class='col-4'>
+                  <div class='item side webfonts'>
+                    <i></i>
+                    <h3>Web Fonts Made Easier</h3>
+                    <p>Easilty embed your fonts and use a shorthand for each font which will save you lots of work hours.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class='bottom-border'>
+          </div>
+        </div>
+      </section>
+      <!-- /Features -->
+      
     </div>
     <!-- /Content -->
     
-    <footer id='main-footer'></footer>
+    <footer id='main-footer'>
+      <a href='#' id='scroll-to-top' title='Scroll to Top'></a>
+      <a href='#' id='change-language' title='عربى'>عربى</a>
+      <div class='container'>
+        <div class='row'>
+          <div class='buttons center'>
+            <a class='btn icn primary red2 github' href='#'>Report Issues</a>
+            <a class='btn icn primary green3 docs' href='#'>Getting Started</a>
+          </div>
+          <div class='clear'></div>
+          <div class='social-links'>
+            <ul class='rr'>
+              <li>
+                <a class='github' href='#' title='Github'></a>
+              </li>
+              <li>
+                <a class='twitter' href='#' title='Twitter'></a>
+              </li>
+              <li>
+                <a class='facebook' href='#' title='Facebook'></a>
+              </li>
+            </ul>
+          </div>
+          <div class='copyrights'>
+            <p>
+              Gems/Sass is maintained by Mohamed Gamil (
+              <a href='#' title='Gemy.me Homepage'>Gemy.me</a>
+              ) — tweet me at
+              <a href='#' title='My Twitter'>@GuruGemy</a>
+              if you got any questions.
+            </p>
+            <p>
+              Copyright © 2013 Gemy.me; This software is licensed under the
+              <strong>MIT License.</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- /Footer -->
     
     <div class='hidden' id='dialogs-container'></div>

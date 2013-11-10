@@ -9,14 +9,14 @@
 	\
 	
 	%head
-		%title Page Title
+		%title Gems/Sass Frontend Framework
 		
 		%meta{:charset => 'utf-8'}
 		%meta{:name => 'viewport', :content => 'width=device-width,initial-scale=1'}
 		
 		%link{:rel => 'stylesheet', :type => 'text/css', :href => 'css/reset.css'}
 		%link{:rel => 'stylesheet', :type => 'text/css', :href => 'css/jquery-ui.css'}
-		%link{:rel => 'stylesheet', :type => 'text/css', :href => 'css/gos.css'}
+		%link{:rel => 'stylesheet', :type => 'text/css', :href => 'css/main.css'}
 		
 		%script{:type => 'text/javascript', :src => 'js/vendor/jquery-1.9.1.min.js'}
 		%script{:type => 'text/javascript', :src => 'js/vendor/modernizr-2.6.2.min.js'}
@@ -51,20 +51,156 @@
 				%a{:href => 'http://browsehappy.com/'} upgrade your browser
 				to improve your experience.
 		
-		%header#main-header
+		%header#main-header.cf
+			.container
+				.row
+					.col-4
+						.logo
+							%a{:href => '#', :title => 'Gems/Sass'}
+								%img{:src => 'images/shared/logo.png', :alt => 'Gems/Sass'}
+					.col-8
+						#main-menu.menu
+							%span.separator
+							%a.menu-icon{:href => '#', :title => 'Open Navigation Menu'}
+							.menu-links
+								%ul.rr
+									%li
+										%a.home{:href => '#'} Homepage
+									%li
+										%a.docs{:href => '#'} Documentation
+									%li
+										%a.report{:href => '#'} Report Issues / Propose Feature
+									%li
+										%a.author{:href => '#'} About The Author
+									%li
+										%a.contact{:href => '#'} Contact
+						.iconed-links
+							%ul.rr
+								%li
+									%a.gemy{:href => '#', :title => 'Gemy.me Homepage'}
+								%li
+									%a.github{:href => '#', :title => 'Project Repository on Github'}
+								%li
+									%a.docs{:href => '#', :title => 'Gems/Sass Documentation'}
 		//Header
 		\
 		
 		
 		%div{:role => 'main'}
-			%div
+			
+			\
+			%section.hero-unit.cf
 				.container
-					%p Hello World!
+					.row
+						%h1 What?
+						%p.col-8.offset-2
+							Gems/Sass — 
+							%i Gems Over Sass
+							— or 
+							%i GOS 
+							is a simple Micro-Framework that helps you when you start coding up your Web Designs; using a set of collected and implemented 
+							%strong Haml
+							, 
+							%strong Sass
+							, and 
+							%strong Javascript 
+							open-source files and libraries to get the job done faster and easier.
+						.clear
+						%p.col-8.offset-2
+							It’s based on
+							%strong HTML 5 Boilerplate
+							, and powered by Sass. Plus tons of other features that will help you develop impressive Web Applications.
+						.clear
+						.buttons.col-6.offset-3
+							%a.btn.icn.primary.green2.download{:href => '#'} Download v1.x.x
+							%a.btn.icn.primary.black2.docs{:href => '#'} Documentation
+			//Hero Unit
+			\
+			
+			\
+			%section.why-use.cf
+				.container
+					.row
+						.col-12
+							%h2.heading Why ?
+						.clear
+						.features
+							.top-row.cf
+								.col-4
+									.item.side.left.bourbon
+										%a{:href => '#'}
+											%i
+											%h3 Strengthened by Bourbon
+										%p The beautiful, simple and lightweight mixin library for Sass.
+								.col-4
+									.item.center.h5bp
+										%a{:href => '#'}
+											%i
+											%h3 HTML 5 Boilerplate
+										%p The base styles of the Framework is based on HTML5 Boilerplate; the most popular Frontend Template on the Web.
+								.col-4
+									.item.side.right.sass
+										%a{:href => '#'}
+											%i
+											%h3 Powered by Sass
+										%p It has been established that SASS is the most mature and powerful CSS extension to date.
+							.middle-row.cf
+								.col-4.offset-4
+									.item.center.onefile
+										%i
+										%h3 1 Site in 1 File
+										%p Build all of your final CSS into 1 file. For even faster performance.
+							.bottom-row.cf
+								.col-4
+									.item.side.left.multicolor
+										%i
+										%h3 Multi-Colored Templates
+										%p Just define your class names and the color HEX values and you’re good to go.
+								.col-4
+									.item.center.rtlsupport
+										%i
+										%h3 RTL Support
+										%p Implement your RTL styles effortlessly. Aside from the bundled RTL grid system.
+								.col-4
+									.item.side.webfonts
+										%i
+										%h3 Web Fonts Made Easier
+										%p Easilty embed your fonts and use a shorthand for each font which will save you lots of work hours.
+						%hr.bottom-border
+			//Features
+			\
+			
 		//Content
 		\
 		
 		
 		%footer#main-footer
+			%a#scroll-to-top{:href => '#', :title => 'Scroll to Top'}
+			%a#change-language{:href => '#', :title => 'عربى'} عربى
+			.container
+				.row
+					.buttons.center
+						%a.btn.icn.primary.red2.github{:href => '#'} Report Issues
+						%a.btn.icn.primary.green3.docs{:href => '#'} Getting Started
+					.clear
+					.social-links
+						%ul.rr
+							%li
+								%a.github{:href => '#', :title => 'Github'}
+							%li
+								%a.twitter{:href => '#', :title => 'Twitter'}
+							%li
+								%a.facebook{:href => '#', :title => 'Facebook'}
+					.copyrights
+						%p
+							Gems/Sass is maintained by Mohamed Gamil (
+							%a{:href => '#', :title => 'Gemy.me Homepage'} Gemy.me
+							) — tweet me at 
+							%a{:href => '#', :title => 'My Twitter'} @GuruGemy 
+							if you got any questions.
+						%p
+							Copyright © 2013 Gemy.me; This software is licensed under the 
+							%strong MIT License.
 		//Footer
 		\
 		

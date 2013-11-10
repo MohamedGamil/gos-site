@@ -2,4 +2,128 @@
    MAIN CONTENT
    ========================================================================== */
 div[role='main'] {
+	padding-top: 100px;
+	
+	.hero-unit {
+		padding: 40px 0 35px;
+		background: url( $imgs + 'shared/wetsnow.png' ) repeat;
+		border-bottom: 4px solid #cbcbcb;
+		
+		h1 {
+			color: #333;
+			font-weight: 300;
+			text-align: center;
+			text-shadow: 0 1px 0 #FFf;
+			@include font( lato );
+		}
+		
+		p {
+			margin-bottom: 24px;
+			color: #555;
+			text-align: center;
+		}
+		
+		.buttons {
+			text-align: center;
+		}
+	}
+	
+	.why-use {
+		padding: 100px 0 0 0;
+		
+		h2.heading {
+			position: relative;
+			color: #333;
+			font-size: 2em;
+			font-weight: 300;
+			text-align: center;
+			text-shadow: 0 1px 0 #FFf;
+			
+			&:after {
+				content: "";
+				width: 150px;
+				margin-left: -75px;
+				border-style: solid;
+				border-width: 1px 0 1px;
+				border-top-color: #ddd;
+				border-bottom-color: #f7f7f7;
+				z-index: 1;
+				@include position( absolute, 60px 0 0 50% );
+			}
+		}
+		
+		.features {
+			padding: 90px 0 50px;
+			text-align: center;
+			
+			.item {
+				
+				i {
+					display: block;
+					width: 198px;
+					height: 216px;
+					margin: 0 auto;
+					background: url( $imgs + 'content/badges.png' ) no-repeat;
+				}
+				
+				h3 {
+					margin-top: 30px;
+					color: #2d2d2e;
+					font-size: 1.13em;
+				}
+				
+				p {
+					margin-top: 14px;
+					color: #636466;
+				}
+				
+				$bgamount  : 0px;
+				$bgcounter : -1;
+				@each $classname in ( bourbon h5bp sass onefile multicolor rtlsupport webfonts ) {
+					&.#{$classname} i {
+						$bgamount  :  -216 + ( -216px *  $bgcounter );
+						$bgcounter : $bgcounter + 1;
+						background-position: 0 $bgamount;
+					}
+				}
+				
+				a {
+					
+					i {
+						@include transition( 1s );
+					}
+					
+					&:hover i {
+						@include transform( translateY( -15px ) scale(0.9, 0.9) );
+						@include opacity( 0.66 );
+					}
+				}
+			}
+			
+			.top-row .item.side {
+				margin-top: 160px;
+			}
+			
+			.middle-row .item.center {
+				margin-top: -36px;
+			}
+			
+			.bottom-row .item {
+				
+				&.center {
+					margin-top: 80px;
+				}
+				&.side {
+					margin-top: -82px;
+				}
+			}
+		}
+		
+		hr.bottom-border {
+			height: 4px;
+			margin: 1.5em 0.4em;
+			background: url( $imgs + 'shared/lined-border.png' ) repeat-x;
+			border: 0 solid;
+		}
+	}
 }
