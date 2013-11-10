@@ -40,7 +40,7 @@
 	\
 	-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	
-	%body
+	%body.theme-rtl
 		\
 		
 		/[if lt IE 8]
@@ -61,27 +61,27 @@
 					.col-8
 						#main-menu.menu
 							%span.separator
-							%a.menu-icon{:href => '#', :title => 'Open Navigation Menu'}
+							%a.menu-icon{:href => '#', :title => 'فتح قائمة التصفح'}
 							.menu-links
 								%ul.rr
 									%li
-										%a.home{:href => '#'} Homepage
+										%a.home{:href => '#'} الرئيسية
 									%li
-										%a.docs{:href => '#'} Documentation
+										%a.docs{:href => '#'} ملفات التوثيق
 									%li
-										%a.report{:href => '#'} Report Issues / Propose Feature
+										%a.report{:href => '#'} تبليغ عن مشكلة / ارسال إقتراح
 									%li
-										%a.author{:href => '#'} About The Author
+										%a.author{:href => '#'} عن المطور
 									%li
-										%a.contact{:href => '#'} Contact
+										%a.contact{:href => '#'} اتصل بى
 						.iconed-links
 							%ul.rr
 								%li
-									%a.gemy{:href => '#', :title => 'Gemy.me Homepage', :rel => 'tooltip bottom pos-top:30'}
+									%a.gemy{:href => '#', :title => 'رئيسية Gemy.me', :rel => 'tooltip bottom pos-top:30'}
 								%li
-									%a.github{:href => '#', :title => 'Project Repository on Github', :rel => 'tooltip bottom pos-top:30'}
+									%a.github{:href => '#', :title => 'مستودع المشروع على Github', :rel => 'tooltip bottom pos-top:30'}
 								%li
-									%a.docs{:href => '#', :title => 'Gems/Sass Documentation', :rel => 'tooltip bottom pos-top:30'}
+									%a.docs{:href => '#', :title => 'ملفات توثيق Gems/Sass', :rel => 'tooltip bottom pos-top:30'}
 		//Header
 		\
 		
@@ -92,28 +92,30 @@
 			%section.hero-unit.cf
 				.container
 					.row
-						%h1 What?
+						%h1 ماذا ؟
 						%p.col-8.offset-2
 							Gems/Sass — 
 							%i Gems Over Sass
-							— or 
+							— أو 
 							%i GOS 
-							is a simple Micro-Framework that helps you when you start coding up your Web Designs; using a set of collected and implemented 
+							هو عبارة عن إطار عمل مصغر يساعدك عندما تبدأ تكويد تصاميم للويب. وذلك بإستخدام مجموعة من ملفات ومكتبات 
 							%strong Haml
 							, 
 							%strong Sass
-							, and 
+							, و 
 							%strong Javascript 
-							open-source files and libraries to get the job done faster and easier.
+							مجانية و مفتوحة المصدر لتساعدك على إنجاز المهمة بسرعة وسهولة.
 						.clear
 						%p.col-8.offset-2
-							It’s based on
+							إطار العمل هذا يرتكز على 
 							%strong HTML 5 Boilerplate
-							, and powered by Sass. Plus tons of other features that will help you develop impressive Web Applications.
+							, و يعمل بواسطة Sass ملحق CSS الشهير. بالإضافة الى العديد من المزايا الأخرى التى ستساعدك على تطوير تطبيقات رائعة للويب.
 						.clear
 						.buttons
-							%a.btn.icn.primary.green2.download{:href => '#'} Download v1.x.x
-							%a.btn.icn.primary.black2.doc{:href => '#'} Documentation
+							%a.btn.icn.primary.green2.download{:href => '#'}
+								تحميل الإصدار
+								%span.dir-ltr 1.x.x
+							%a.btn.icn.primary.black2.doc{:href => '#'} ملفات التوثيق
 			//Hero Unit
 			\
 			
@@ -122,7 +124,7 @@
 				.container
 					.row
 						.col-12
-							%h2.heading Why ?
+							%h2.heading لماذا ؟
 						.clear
 						.features
 							.top-row.cf
@@ -130,42 +132,42 @@
 									.item.side.left.bourbon
 										%a{:href => '#'}
 											%i
-											%h3 Strengthened by Bourbon
-										%p The beautiful, simple and lightweight mixin library for Sass.
+											%h3 معزز بمكتبة Bourbon
+										%p أحدى مكتبات Sass الجميلة, البسيطة والخفيفة.
 								.col-4
 									.item.center.h5bp
 										%a{:href => '#'}
 											%i
 											%h3 HTML 5 Boilerplate
-										%p The base styles of the Framework is based on HTML5 Boilerplate; the most popular Frontend Template on the Web.
+										%p أنماط إطار العمل الأساسية ترتكز على HTML 5 Boilerplate; أحد أشهر قوالب الواجهة الأمامية على الويب.
 								.col-4
 									.item.side.right.sass
 										%a{:href => '#'}
 											%i
-											%h3 Powered by Sass
-										%p It has been established that SASS is the most mature and powerful CSS extension to date.
+											%h3 يعمل على Sass
+										%p Sass هو أقوى ملحق للغة CSS حتى الآن.
 							.middle-row.cf
 								.col-4.offset-4
 									.item.center.onefile
 										%i
-										%h3 1 Site in 1 File
-										%p Build all of your final CSS into 1 file. For even faster performance.
+										%h3 جميع الأنماط فى ملف واحد
+										%p هيكل إطار العمل ينتج ملف CSS واحد يحتوى على كل الأنماط الخاصة بتصميمك لأداء أسرع وأكثر قوة.
 							.bottom-row.cf
 								.col-4
 									.item.side.left.multicolor
 										%i
-										%h3 Multi-Colored Templates
-										%p Just define your class names and the color HEX values and you’re good to go.
+										%h3 قوالب متعددة الألوان
+										%p فقط قم بتحديد اسم اللون و قيمة الـ HEX الخاصة به فى ملف الإعدادات, لتبدأ فى عمل انماط متعددة اللألوان لأى تصميم فى وقت قصر.
 								.col-4
 									.item.center.rtlsupport
 										%i
-										%h3 RTL Support
-										%p Implement your RTL styles effortlessly. Aside from the bundled RTL grid system.
+										%h3 دعم لغات — من اليمين لليسار
+										%p قم بإنشاء انماط — من اليمين لليسار — الخاصة بتصميمك بمنتهى السهولة. هذا بالإضافة الى نظام الـ RTL Grid المرفق مع إطار العمل.
 								.col-4
 									.item.side.webfonts
 										%i
-										%h3 Web Fonts Made Easier
-										%p Easily embed your fonts and use a shorthand for each font which will save you lots of work hours.
+										%h3 إستخدام اسهل لخطوط الويب
+										%p بسهولة اضف أى خطوط للويب واستخدم الاسم المختصر لكل منها لسهولة اكبر فى التحكم فى شكل النصوص والذى سيوفر عليك ساعات كثيرة من العمل.
 						%hr.bottom-border
 			//Features
 			\
@@ -176,12 +178,12 @@
 		
 		%footer#main-footer
 			%a#scroll-to-top{:href => '#', :title => 'Scroll to Top'}
-			%a#change-language{:href => '#', :title => 'عربى'} عربى
+			%a#change-language{:href => '#', :title => 'English'} English
 			.container
 				.row
 					.buttons.center
-						%a.btn.icn.primary.red.github{:href => '#'} Report Issues
-						%a.btn.icn.primary.green3.docs{:href => '#'} Getting Started
+						%a.btn.icn.primary.red.github{:href => '#'} إبلاغ عن أخطاء
+						%a.btn.icn.primary.green3.docs{:href => '#'} كيفية البدأ
 					.clear
 					.social-links
 						%ul.rr
@@ -193,14 +195,15 @@
 								%a.facebook{:href => '#', :title => 'Facebook'}
 					.copyrights
 						%p
-							Gems/Sass is maintained by Mohamed Gamil (
-							%a{:href => '#', :title => 'Gemy.me Homepage'} Gemy.me
-							) — tweet me at 
+							إطار عمل Gems/Sass تم تطويره بواسطة Mohamed Gamil (
+							%a{:href => '#', :title => 'رئيسية Gemy.me'} Gemy.me
+							) — راسلنى على تويتر
 							%a{:href => '#', :title => 'My Twitter'} @GuruGemy 
-							if you got any questions.
+							إذا كان لديك أى استفسار.
 						%p
-							Copyright © 2013 Gemy.me; This software is licensed under the 
-							%strong MIT License.
+							جميع الحقوق محفوظة © لسنة 2013 Gemy.me; هذا المشروع مرخص بموجب رخصة 
+							%strong MIT 
+							للمصادر المفتوحة.
 		//Footer
 		\
 		

@@ -7,6 +7,12 @@ $(function ()
 			console.log( arguments[ a ] );
 	}
 	
+	// Is RTL?
+	function is_rtl()
+	{
+		return $('body').hasClass( 'theme-rtl' );
+	}
+	
 	// Scolling Event
 	(function ($)
 	{
@@ -46,7 +52,8 @@ $(function ()
 	{
 		var menu		= $( '#main-menu' ),
 			toggle		= menu.find( '.menu-icon' ),
-			container	= menu.find( '.menu-links' );
+			container	= menu.find( '.menu-links' ),
+			animDir		= is_rtl() ? 'right' : 'left';
 			
 		toggle.on( 'click', function ( _ev )
 		{
@@ -54,11 +61,11 @@ $(function ()
 			
 			if ( menu.hasClass( 'active' ) )
 			{
-				container.hide( 'drop', {direction: 'right'}, 300 );
+				container.hide( 'drop', {direction: animDir}, 300 );
 				menu.removeClass( 'active' );
 			}else
 			{
-				container.show( 'drop', {direction: 'right'}, 300 );
+				container.show( 'drop', {direction: animDir}, 300 );
 				menu.addClass( 'active' );
 			}
 		});
