@@ -1051,10 +1051,6 @@ a.btn.red3.shadow:hover:after {
   background: #bd2742;
 }
 
-body.theme-rtl a.btn {
-  letter-spacing: normal;
-}
-
 .buttons a.btn {
   margin-right: 10px;
 }
@@ -1063,6 +1059,30 @@ body.theme-rtl a.btn {
   display: block;
   width: 80%;
   margin: 0 auto 10px;
+}
+
+body.theme-rtl a.btn {
+  font-weight: bold;
+  letter-spacing: normal;
+  font-family: "Droid Arabic Kufi", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: -0.5px;
+  word-spacing: 2px;
+  white-space: nowrap;
+}
+body.theme-rtl a.btn.icn {
+  min-width: 128px;
+  padding-right: 58px;
+  text-align: right;
+}
+body.theme-rtl a.btn.icn:before {
+  height: 37px;
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
 
 /* Grid System */

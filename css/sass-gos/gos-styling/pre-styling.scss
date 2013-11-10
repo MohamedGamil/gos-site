@@ -181,10 +181,6 @@ a.btn {
 	}
 }
 
-body.theme-rtl a.btn {
-	letter-spacing: normal; // Set Back to Normal ( Non-English Text )
-}
-
 .buttons a.btn {
 	margin-right: 10px;
 }
@@ -193,4 +189,23 @@ body.theme-rtl a.btn {
 	display: block;
 	width: 80%;
 	margin: 0 auto 10px;
+}
+
+
+body.theme-rtl a.btn {
+	font-weight: bold;
+	letter-spacing: normal; // Set Back to Normal ( Non-English Text )
+	@include font( dk, true );
+	
+	&.icn {
+		min-width: 128px;
+		padding-right: 58px;
+		text-align: right;
+		
+		&:before {
+			height: 37px;
+			@include border-radius( 0 3px 3px 0 );
+			@include position( absolute, 0px 0px 0 0 );
+		}		
+	}
 }
