@@ -18,6 +18,7 @@
 	}
 
 	.row {
+		margin-left: 0;
 		margin-right: -20px;
 		*zoom: 1;
 		// @include clearfix; // Requires <bourbon> library.
@@ -136,7 +137,6 @@
 		.offset-1 {
 			margin-right: 100px;
 		}
-		
 		
 		// /**
 		//  * Fluid Layout
@@ -341,6 +341,11 @@
 					*margin-right: 8.404255319148938%;
 				}
 			}
+		}
+		
+		[class*="col-"], [class*="offset-"] {
+			margin-left: 0 !important;
+			*margin-left: 0 !important;
 		}
 	}
 	
