@@ -220,6 +220,10 @@ aside .block:last-child {
   overflow: hidden;
 }
 
+.dir-ltr, .dir-ltr {
+  display: inline-block;
+}
+
 .dir-rtl {
   direction: rtl;
 }
