@@ -22,7 +22,7 @@
 
 @if $enable-rtl	!= false {
 	
-	body.them-rtl {
+	body.theme-rtl {
 		@include gos-grid-rtl();
 		@include gos-grid-responsive-rtl();
 	}
