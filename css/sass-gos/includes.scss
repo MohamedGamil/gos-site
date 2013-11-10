@@ -14,13 +14,16 @@
 
 
 // /*
-//  * Enable RTL Grid System by changing the value of @variable-name `$theme-colors` to anything else than `false`
+//  * Enable RTL Grid System by changing the value of @variable-name `$enable-rtl` to anything else than `false`
 //  * Defined in `./css/gos.css`
 //  */
+@include gos-grid();
+@include gos-grid-responsive();
+
 @if $enable-rtl	!= false {
-	@include gos-grid-rtl();
-	@include gos-grid-responsive-rtl();
-} @else {
-	@include gos-grid();
-	@include gos-grid-responsive();
+	
+	body.them-rtl {
+		@include gos-grid-rtl();
+		@include gos-grid-responsive-rtl();
+	}
 }
