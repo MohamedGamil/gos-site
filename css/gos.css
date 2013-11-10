@@ -220,6 +220,14 @@ aside .block:last-child {
   overflow: hidden;
 }
 
+.dir-rtl {
+  direction: rtl;
+}
+
+.dir-ltr {
+  direction: ltr;
+}
+
 .browsehappy {
   margin: 0.2em 0;
   padding: 0.4em 0.8em;
