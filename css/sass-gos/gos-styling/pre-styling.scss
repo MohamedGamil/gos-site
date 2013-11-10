@@ -14,7 +14,7 @@ a.btn {
 	position: relative;
 	display: inline-block;
 	vertical-align: top;
-	padding: 10px 14px 7px;
+	padding: 8px 14px 6px;
 	color: #FFF;
 	font-size: 14px;
 	font-weight: normal; // More Smooth
@@ -23,7 +23,7 @@ a.btn {
 	text-align: center;
 	border-bottom: 3px solid transparent;
 	z-index: 3;
-	@include font( lato );
+	@include font( os );
 	
 	&, &.shadow:after {
 		@include transition( 0.3s );
@@ -31,18 +31,16 @@ a.btn {
 	}
 	
 	&.shadow {
-		padding-bottom: 10px;
+		padding-bottom: 8px;
 	}
 	
 	&.shadow:after {
 		content: "";
-		position: absolute;
 		width: 100%;
 		height: 100%;
-		top: 0;
-		left: 0;
 		background: #777;
 		z-index: -1;
+		@include position( absolute, 0px 0 0px 0 );
 	}
 	
 	&:hover {
@@ -63,14 +61,91 @@ a.btn {
 		}
 	}
 	
+	&.icn {
+		min-width: 128px;
+		padding-left: 58px;
+		text-align: left;
+		
+		&:before {
+			content: "";
+			width: 40px;
+			height: 37px;
+			@include border-radius( 3px 0 0 3px );
+			@include position( absolute, 0px 0 0 0px );
+			background: url( $imgs + 'shared/button-icons.png' ) no-repeat rgba( #000, 0.15 );
+		}
+		
+		$xCount     : -1;
+		$yCount     : -1;
+		$icons-list : 
+		(
+			( download doc github ),
+			( upload docs bitbucket )
+		);
+		
+		@each $col in $icons-list {
+			@each $icn in $col {
+				$xval   :  -40 + ( -40px *  $xCount );
+				$yval   :  -40 + ( -40px *  $yCount );
+				$yCount : $yCount + 1;
+				
+				&.#{$icn}:before {
+					background-position: $xval $yval;
+				}
+			}
+			
+			$xCount : $xCount + 1;
+			$yCount : -1;
+		}
+		
+		&.glyph:before {
+			background-image: url( $imgs + 'shared/button-icons-bootstrap.png' );
+		}
+		
+		$bsi-list   : 
+		(
+			( glass, music, search, envelope, heart, star, star-empty, user, film, th-large, th, th-list, ok, remove, zoom-in, zoom-out, off, signal, cog, trash ),
+			( home, file, time, road, download-alt, download, upload, inbox, play-circle, repeat, refresh, list-alt, lock, flag, headphones, volume-off, volume-down, volume-up, qrcode, barcode ),
+			( tag, tags, book, bookmark, print, camera, font, bold, italic, text-height, text-width, align-left, align-center, align-right, align-justify, list, indent-left, indent-right, facetime-video, picture ),
+			( pencil, map-marker, adjust, tint, edit, share, check, move, step-backward, fast-backward, backward, play, pause, stop, forward, fast-forward, step-forward, eject, chevron-left, chevron-right ),
+			( plus-sign, minus-sign, remove-sign, ok-sign, question-sign, info-sign, screenshot, remove-circle, ok-circle, ban-circle, arrow-left, arrow-right, arrow-up, arrow-down, share-alt, resize-full, resize-small, plus, minus, asterisk ),
+			( exclamation-sign, gift, leaf, fire, eye-open, eye-close, warning-sign, plane, calendar, random, comment, magnet, chevron-up, chevron-down, retweet, shopping-cart, folder-close, folder-open, resize-vertical, resize-horizontal ),
+			( hdd, bullhorn, bell, certificate, thumbs-up, thumbs-down, hand-right, hand-left, hand-up, hand-down, circle-arrow-right, circle-arrow-left, circle-arrow-up, circle-arrow-down, globe, wrench, tasks, filter, briefcase, fullscreen )
+		);
+		
+		@each $col in $bsi-list {
+			@each $icn in $col {
+				$xval   :  -40 + ( -40px *  $xCount );
+				$yval   :  -40 + ( -40px *  $yCount );
+				$xCount : $xCount + 1;
+				
+				&.glyph.#{$icn}:before {
+					background-position: $xval $yval;
+				}
+			}
+			
+			$yCount : $yCount + 1;
+			$xCount : -1;
+		}
+	}
+	
 	$btn_colors	: 
 	(
-		// primary #23d36d #1aa253,
-		green #23d36d #1aa253,
-		orange #da5b42 #a03e2b,
-		// blue #6ACEEB #277C93,
-		blue #04BDBD #077F7F,
-		red #bd2742 #88192d
+		black #7c7d80 #4a4b4d,
+		black2 #636466 #313233,
+		black3 #444 #121212,
+		green #23d36d #1ba153,
+		green2 #8ec447 #699134,
+		green3 #02a779 #017353,
+		orange #fa8f3e #c77232,
+		orange2 #FA9600 #c77700,
+		orange3 #da5b42 #a64532,
+		blue #7ac5df #5e98ab,
+		blue2 #01c0eb #0296b8,
+		blue3 #04BDBD #038a8a,
+		red #f24a39 #bf3c2e,
+		red2 #f34c6b #bf3b53,
+		red3 #bd2742 #8a1d31
 	);
 	
 	@each $c in $btn_colors {
@@ -79,17 +154,27 @@ a.btn {
 		$border	: nth( $c, 3 );
 		
 		&.#{$class} {
-			background: darken( $border, 5% );
-			
-			&.shadow:after {
-				background: darken( $bg, 10% );
-			}
+			/* Button Color Variation: '#{$class}' */
+			background: darken( $bg, 10% );
+			text-shadow: 0 1px 1px rgba( #000, 0.22 );
 			
 			&:hover {
-				background: $border;
+				background: $bg;
+			}
+			
+			&.shadow {
+				background: darken( $border, 5% );
 				
-				&.shadow:after {
-					background: $bg;
+				&:after {
+					background: darken( $bg, 10% );
+				}
+				
+				&:hover {
+					background: $border;
+					
+					&:after {
+						background: $bg;
+					}
 				}
 			}
 		}
