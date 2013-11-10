@@ -89,6 +89,7 @@ if("undefined"!=typeof jQuery){(function(a){a.imgpreload=function(b,c){c=a.exten
                 var tp,
 					nm = $.fn.tipsy.setOrigins( $ele, false, true ),
 					om = this.options.margin,
+					is = this.options.smart,
 					cn = true;
                 switch (gravity.charAt(0)) {
                 case 'n':
@@ -96,11 +97,11 @@ if("undefined"!=typeof jQuery){(function(a){a.imgpreload=function(b,c){c=a.exten
                         top: pos.top + pos.height + this.options.offset,
                         left: pos.left + pos.width / 2 - actualWidth / 2
                     };
-					if ( !isNaN( nm.element.top ) && !isNaN( om.element.top ) && ( nm.element.top < om.element.top ) ) {
+					if ( is && !isNaN( nm.element.top ) && !isNaN( om.element.top ) && ( nm.element.top < om.element.top ) ) {
 						cn = false;
 						tp.top = tp.top - ( om.element.top - nm.element.top );
 					}
-					if ( cn && !isNaN( nm.parent.top ) && !isNaN( om.parent.top ) && ( nm.parent.top < om.parent.top ) ) {
+					if ( is && cn && !isNaN( nm.parent.top ) && !isNaN( om.parent.top ) && ( nm.parent.top < om.parent.top ) ) {
 						tp.top = tp.top - ( om.parent.top - nm.parent.top );
 					}
 					break;
@@ -115,11 +116,11 @@ if("undefined"!=typeof jQuery){(function(a){a.imgpreload=function(b,c){c=a.exten
                         top: pos.top + pos.height / 2 - actualHeight / 2,
                         left: pos.left - actualWidth - this.options.offset
                     };
-					if ( !isNaN( nm.element.right ) && !isNaN( om.element.right ) && ( nm.element.right < om.element.right ) ) {
+					if ( is && !isNaN( nm.element.right ) && !isNaN( om.element.right ) && ( nm.element.right < om.element.right ) ) {
 						cn = false;
 						tp.left = tp.left + ( om.element.right - nm.element.right );
 					}
-					if ( cn && !isNaN( nm.parent.right ) && !isNaN( om.parent.right ) && ( nm.parent.right < om.parent.right ) ) {
+					if ( is && cn && !isNaN( nm.parent.right ) && !isNaN( om.parent.right ) && ( nm.parent.right < om.parent.right ) ) {
 						tp.left = tp.left + ( om.parent.right - nm.parent.right );
 					}
                     break;
@@ -128,11 +129,11 @@ if("undefined"!=typeof jQuery){(function(a){a.imgpreload=function(b,c){c=a.exten
                         top: pos.top + pos.height / 2 - actualHeight / 2,
                         left: pos.left + pos.width + this.options.offset
                     };
-					if ( !isNaN( nm.element.left ) && !isNaN( om.element.left ) && ( nm.element.left < om.element.left ) ) {
+					if ( is && !isNaN( nm.element.left ) && !isNaN( om.element.left ) && ( nm.element.left < om.element.left ) ) {
 						cn = false;
 						tp.left = tp.left - ( om.element.left - nm.element.left );
 					}
-					if ( cn && !isNaN( nm.parent.left ) && !isNaN( om.parent.left ) && ( nm.parent.left < om.parent.left ) ) {
+					if ( is && cn && !isNaN( nm.parent.left ) && !isNaN( om.parent.left ) && ( nm.parent.left < om.parent.left ) ) {
 						tp.left = tp.left - ( om.parent.left - nm.parent.left );
 					}
                     break;
