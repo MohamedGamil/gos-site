@@ -763,7 +763,7 @@ $(function ()
 					
 					// Smart Margin Tracking
 					if ( val.match(/smart/ig) )
-						smart	= val.match(/\:false/ig);
+						smart	= val.match(/\:true/ig);
 				});
 				
 				// Re-Assign Position
