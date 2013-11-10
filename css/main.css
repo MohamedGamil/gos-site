@@ -244,7 +244,7 @@ a.btn {
   position: relative;
   display: inline-block;
   vertical-align: top;
-  padding: 10px 14px 7px;
+  padding: 8px 14px 6px;
   color: #FFF;
   font-size: 14px;
   font-weight: normal;
@@ -253,7 +253,7 @@ a.btn {
   text-align: center;
   border-bottom: 3px solid transparent;
   z-index: 3;
-  font-family: "Lato", "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 a.btn, a.btn.shadow:after {
   -webkit-transition: 0.3s;
@@ -265,17 +265,17 @@ a.btn, a.btn.shadow:after {
   border-radius: 3px;
 }
 a.btn.shadow {
-  padding-bottom: 10px;
+  padding-bottom: 8px;
 }
 a.btn.shadow:after {
   content: "";
-  position: absolute;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
   background: #777;
   z-index: -1;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
 }
 a.btn:hover {
   background: #111;
@@ -291,52 +291,763 @@ a.btn.primary {
 a.btn.primary:hover {
   color: #FFF;
 }
+a.btn.icn {
+  min-width: 128px;
+  padding-left: 58px;
+  text-align: left;
+}
+a.btn.icn:before {
+  content: "";
+  width: 40px;
+  height: 37px;
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  -o-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: url("../images/shared/button-icons.png") no-repeat rgba(0, 0, 0, 0.15);
+}
+a.btn.icn.download:before {
+  background-position: 0px 0px;
+}
+a.btn.icn.doc:before {
+  background-position: 0px -40px;
+}
+a.btn.icn.github:before {
+  background-position: 0px -80px;
+}
+a.btn.icn.upload:before {
+  background-position: -40px 0px;
+}
+a.btn.icn.docs:before {
+  background-position: -40px -40px;
+}
+a.btn.icn.bitbucket:before {
+  background-position: -40px -80px;
+}
+a.btn.icn.glyph:before {
+  background-image: url("../images/shared/button-icons-bootstrap.png");
+}
+a.btn.icn.glyph.glass:before {
+  background-position: -80px 0px;
+}
+a.btn.icn.glyph.music:before {
+  background-position: -120px 0px;
+}
+a.btn.icn.glyph.search:before {
+  background-position: -160px 0px;
+}
+a.btn.icn.glyph.envelope:before {
+  background-position: -200px 0px;
+}
+a.btn.icn.glyph.heart:before {
+  background-position: -240px 0px;
+}
+a.btn.icn.glyph.star:before {
+  background-position: -280px 0px;
+}
+a.btn.icn.glyph.star-empty:before {
+  background-position: -320px 0px;
+}
+a.btn.icn.glyph.user:before {
+  background-position: -360px 0px;
+}
+a.btn.icn.glyph.film:before {
+  background-position: -400px 0px;
+}
+a.btn.icn.glyph.th-large:before {
+  background-position: -440px 0px;
+}
+a.btn.icn.glyph.th:before {
+  background-position: -480px 0px;
+}
+a.btn.icn.glyph.th-list:before {
+  background-position: -520px 0px;
+}
+a.btn.icn.glyph.ok:before {
+  background-position: -560px 0px;
+}
+a.btn.icn.glyph.remove:before {
+  background-position: -600px 0px;
+}
+a.btn.icn.glyph.zoom-in:before {
+  background-position: -640px 0px;
+}
+a.btn.icn.glyph.zoom-out:before {
+  background-position: -680px 0px;
+}
+a.btn.icn.glyph.off:before {
+  background-position: -720px 0px;
+}
+a.btn.icn.glyph.signal:before {
+  background-position: -760px 0px;
+}
+a.btn.icn.glyph.cog:before {
+  background-position: -800px 0px;
+}
+a.btn.icn.glyph.trash:before {
+  background-position: -840px 0px;
+}
+a.btn.icn.glyph.home:before {
+  background-position: 0px -40px;
+}
+a.btn.icn.glyph.file:before {
+  background-position: -40px -40px;
+}
+a.btn.icn.glyph.time:before {
+  background-position: -80px -40px;
+}
+a.btn.icn.glyph.road:before {
+  background-position: -120px -40px;
+}
+a.btn.icn.glyph.download-alt:before {
+  background-position: -160px -40px;
+}
+a.btn.icn.glyph.download:before {
+  background-position: -200px -40px;
+}
+a.btn.icn.glyph.upload:before {
+  background-position: -240px -40px;
+}
+a.btn.icn.glyph.inbox:before {
+  background-position: -280px -40px;
+}
+a.btn.icn.glyph.play-circle:before {
+  background-position: -320px -40px;
+}
+a.btn.icn.glyph.repeat:before {
+  background-position: -360px -40px;
+}
+a.btn.icn.glyph.refresh:before {
+  background-position: -400px -40px;
+}
+a.btn.icn.glyph.list-alt:before {
+  background-position: -440px -40px;
+}
+a.btn.icn.glyph.lock:before {
+  background-position: -480px -40px;
+}
+a.btn.icn.glyph.flag:before {
+  background-position: -520px -40px;
+}
+a.btn.icn.glyph.headphones:before {
+  background-position: -560px -40px;
+}
+a.btn.icn.glyph.volume-off:before {
+  background-position: -600px -40px;
+}
+a.btn.icn.glyph.volume-down:before {
+  background-position: -640px -40px;
+}
+a.btn.icn.glyph.volume-up:before {
+  background-position: -680px -40px;
+}
+a.btn.icn.glyph.qrcode:before {
+  background-position: -720px -40px;
+}
+a.btn.icn.glyph.barcode:before {
+  background-position: -760px -40px;
+}
+a.btn.icn.glyph.tag:before {
+  background-position: 0px -80px;
+}
+a.btn.icn.glyph.tags:before {
+  background-position: -40px -80px;
+}
+a.btn.icn.glyph.book:before {
+  background-position: -80px -80px;
+}
+a.btn.icn.glyph.bookmark:before {
+  background-position: -120px -80px;
+}
+a.btn.icn.glyph.print:before {
+  background-position: -160px -80px;
+}
+a.btn.icn.glyph.camera:before {
+  background-position: -200px -80px;
+}
+a.btn.icn.glyph.font:before {
+  background-position: -240px -80px;
+}
+a.btn.icn.glyph.bold:before {
+  background-position: -280px -80px;
+}
+a.btn.icn.glyph.italic:before {
+  background-position: -320px -80px;
+}
+a.btn.icn.glyph.text-height:before {
+  background-position: -360px -80px;
+}
+a.btn.icn.glyph.text-width:before {
+  background-position: -400px -80px;
+}
+a.btn.icn.glyph.align-left:before {
+  background-position: -440px -80px;
+}
+a.btn.icn.glyph.align-center:before {
+  background-position: -480px -80px;
+}
+a.btn.icn.glyph.align-right:before {
+  background-position: -520px -80px;
+}
+a.btn.icn.glyph.align-justify:before {
+  background-position: -560px -80px;
+}
+a.btn.icn.glyph.list:before {
+  background-position: -600px -80px;
+}
+a.btn.icn.glyph.indent-left:before {
+  background-position: -640px -80px;
+}
+a.btn.icn.glyph.indent-right:before {
+  background-position: -680px -80px;
+}
+a.btn.icn.glyph.facetime-video:before {
+  background-position: -720px -80px;
+}
+a.btn.icn.glyph.picture:before {
+  background-position: -760px -80px;
+}
+a.btn.icn.glyph.pencil:before {
+  background-position: 0px -120px;
+}
+a.btn.icn.glyph.map-marker:before {
+  background-position: -40px -120px;
+}
+a.btn.icn.glyph.adjust:before {
+  background-position: -80px -120px;
+}
+a.btn.icn.glyph.tint:before {
+  background-position: -120px -120px;
+}
+a.btn.icn.glyph.edit:before {
+  background-position: -160px -120px;
+}
+a.btn.icn.glyph.share:before {
+  background-position: -200px -120px;
+}
+a.btn.icn.glyph.check:before {
+  background-position: -240px -120px;
+}
+a.btn.icn.glyph.move:before {
+  background-position: -280px -120px;
+}
+a.btn.icn.glyph.step-backward:before {
+  background-position: -320px -120px;
+}
+a.btn.icn.glyph.fast-backward:before {
+  background-position: -360px -120px;
+}
+a.btn.icn.glyph.backward:before {
+  background-position: -400px -120px;
+}
+a.btn.icn.glyph.play:before {
+  background-position: -440px -120px;
+}
+a.btn.icn.glyph.pause:before {
+  background-position: -480px -120px;
+}
+a.btn.icn.glyph.stop:before {
+  background-position: -520px -120px;
+}
+a.btn.icn.glyph.forward:before {
+  background-position: -560px -120px;
+}
+a.btn.icn.glyph.fast-forward:before {
+  background-position: -600px -120px;
+}
+a.btn.icn.glyph.step-forward:before {
+  background-position: -640px -120px;
+}
+a.btn.icn.glyph.eject:before {
+  background-position: -680px -120px;
+}
+a.btn.icn.glyph.chevron-left:before {
+  background-position: -720px -120px;
+}
+a.btn.icn.glyph.chevron-right:before {
+  background-position: -760px -120px;
+}
+a.btn.icn.glyph.plus-sign:before {
+  background-position: 0px -160px;
+}
+a.btn.icn.glyph.minus-sign:before {
+  background-position: -40px -160px;
+}
+a.btn.icn.glyph.remove-sign:before {
+  background-position: -80px -160px;
+}
+a.btn.icn.glyph.ok-sign:before {
+  background-position: -120px -160px;
+}
+a.btn.icn.glyph.question-sign:before {
+  background-position: -160px -160px;
+}
+a.btn.icn.glyph.info-sign:before {
+  background-position: -200px -160px;
+}
+a.btn.icn.glyph.screenshot:before {
+  background-position: -240px -160px;
+}
+a.btn.icn.glyph.remove-circle:before {
+  background-position: -280px -160px;
+}
+a.btn.icn.glyph.ok-circle:before {
+  background-position: -320px -160px;
+}
+a.btn.icn.glyph.ban-circle:before {
+  background-position: -360px -160px;
+}
+a.btn.icn.glyph.arrow-left:before {
+  background-position: -400px -160px;
+}
+a.btn.icn.glyph.arrow-right:before {
+  background-position: -440px -160px;
+}
+a.btn.icn.glyph.arrow-up:before {
+  background-position: -480px -160px;
+}
+a.btn.icn.glyph.arrow-down:before {
+  background-position: -520px -160px;
+}
+a.btn.icn.glyph.share-alt:before {
+  background-position: -560px -160px;
+}
+a.btn.icn.glyph.resize-full:before {
+  background-position: -600px -160px;
+}
+a.btn.icn.glyph.resize-small:before {
+  background-position: -640px -160px;
+}
+a.btn.icn.glyph.plus:before {
+  background-position: -680px -160px;
+}
+a.btn.icn.glyph.minus:before {
+  background-position: -720px -160px;
+}
+a.btn.icn.glyph.asterisk:before {
+  background-position: -760px -160px;
+}
+a.btn.icn.glyph.exclamation-sign:before {
+  background-position: 0px -200px;
+}
+a.btn.icn.glyph.gift:before {
+  background-position: -40px -200px;
+}
+a.btn.icn.glyph.leaf:before {
+  background-position: -80px -200px;
+}
+a.btn.icn.glyph.fire:before {
+  background-position: -120px -200px;
+}
+a.btn.icn.glyph.eye-open:before {
+  background-position: -160px -200px;
+}
+a.btn.icn.glyph.eye-close:before {
+  background-position: -200px -200px;
+}
+a.btn.icn.glyph.warning-sign:before {
+  background-position: -240px -200px;
+}
+a.btn.icn.glyph.plane:before {
+  background-position: -280px -200px;
+}
+a.btn.icn.glyph.calendar:before {
+  background-position: -320px -200px;
+}
+a.btn.icn.glyph.random:before {
+  background-position: -360px -200px;
+}
+a.btn.icn.glyph.comment:before {
+  background-position: -400px -200px;
+}
+a.btn.icn.glyph.magnet:before {
+  background-position: -440px -200px;
+}
+a.btn.icn.glyph.chevron-up:before {
+  background-position: -480px -200px;
+}
+a.btn.icn.glyph.chevron-down:before {
+  background-position: -520px -200px;
+}
+a.btn.icn.glyph.retweet:before {
+  background-position: -560px -200px;
+}
+a.btn.icn.glyph.shopping-cart:before {
+  background-position: -600px -200px;
+}
+a.btn.icn.glyph.folder-close:before {
+  background-position: -640px -200px;
+}
+a.btn.icn.glyph.folder-open:before {
+  background-position: -680px -200px;
+}
+a.btn.icn.glyph.resize-vertical:before {
+  background-position: -720px -200px;
+}
+a.btn.icn.glyph.resize-horizontal:before {
+  background-position: -760px -200px;
+}
+a.btn.icn.glyph.hdd:before {
+  background-position: 0px -240px;
+}
+a.btn.icn.glyph.bullhorn:before {
+  background-position: -40px -240px;
+}
+a.btn.icn.glyph.bell:before {
+  background-position: -80px -240px;
+}
+a.btn.icn.glyph.certificate:before {
+  background-position: -120px -240px;
+}
+a.btn.icn.glyph.thumbs-up:before {
+  background-position: -160px -240px;
+}
+a.btn.icn.glyph.thumbs-down:before {
+  background-position: -200px -240px;
+}
+a.btn.icn.glyph.hand-right:before {
+  background-position: -240px -240px;
+}
+a.btn.icn.glyph.hand-left:before {
+  background-position: -280px -240px;
+}
+a.btn.icn.glyph.hand-up:before {
+  background-position: -320px -240px;
+}
+a.btn.icn.glyph.hand-down:before {
+  background-position: -360px -240px;
+}
+a.btn.icn.glyph.circle-arrow-right:before {
+  background-position: -400px -240px;
+}
+a.btn.icn.glyph.circle-arrow-left:before {
+  background-position: -440px -240px;
+}
+a.btn.icn.glyph.circle-arrow-up:before {
+  background-position: -480px -240px;
+}
+a.btn.icn.glyph.circle-arrow-down:before {
+  background-position: -520px -240px;
+}
+a.btn.icn.glyph.globe:before {
+  background-position: -560px -240px;
+}
+a.btn.icn.glyph.wrench:before {
+  background-position: -600px -240px;
+}
+a.btn.icn.glyph.tasks:before {
+  background-position: -640px -240px;
+}
+a.btn.icn.glyph.filter:before {
+  background-position: -680px -240px;
+}
+a.btn.icn.glyph.briefcase:before {
+  background-position: -720px -240px;
+}
+a.btn.icn.glyph.fullscreen:before {
+  background-position: -760px -240px;
+}
+a.btn.black {
+  /* Button Color Variation: 'black' */
+  background: #636466;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.22);
+}
+a.btn.black:hover {
+  background: #7c7d80;
+}
+a.btn.black.shadow {
+  background: #3e3e40;
+}
+a.btn.black.shadow:after {
+  background: #636466;
+}
+a.btn.black.shadow:hover {
+  background: #4a4b4d;
+}
+a.btn.black.shadow:hover:after {
+  background: #7c7d80;
+}
+a.btn.black2 {
+  /* Button Color Variation: 'black2' */
+  background: #4a4b4c;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.22);
+}
+a.btn.black2:hover {
+  background: #636466;
+}
+a.btn.black2.shadow {
+  background: #252526;
+}
+a.btn.black2.shadow:after {
+  background: #4a4b4c;
+}
+a.btn.black2.shadow:hover {
+  background: #313233;
+}
+a.btn.black2.shadow:hover:after {
+  background: #636466;
+}
+a.btn.black3 {
+  /* Button Color Variation: 'black3' */
+  background: #2b2b2b;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.22);
+}
+a.btn.black3:hover {
+  background: #444444;
+}
+a.btn.black3.shadow {
+  background: #050505;
+}
+a.btn.black3.shadow:after {
+  background: #2b2b2b;
+}
+a.btn.black3.shadow:hover {
+  background: #121212;
+}
+a.btn.black3.shadow:hover:after {
+  background: #444444;
+}
 a.btn.green {
-  background: #168c48;
+  /* Button Color Variation: 'green' */
+  background: #1ca756;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.22);
+}
+a.btn.green:hover {
+  background: #23d36d;
+}
+a.btn.green.shadow {
+  background: #178b48;
 }
 a.btn.green.shadow:after {
   background: #1ca756;
 }
-a.btn.green:hover {
-  background: #1aa253;
+a.btn.green.shadow:hover {
+  background: #1ba153;
 }
-a.btn.green:hover.shadow:after {
+a.btn.green.shadow:hover:after {
   background: #23d36d;
 }
-a.btn.orange {
-  background: #8c3626;
+a.btn.green2 {
+  /* Button Color Variation: 'green2' */
+  background: #74a434;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.22);
 }
-a.btn.orange.shadow:after {
-  background: #c34026;
+a.btn.green2:hover {
+  background: #8ec447;
+}
+a.btn.green2.shadow {
+  background: #5b7e2d;
+}
+a.btn.green2.shadow:after {
+  background: #74a434;
+}
+a.btn.green2.shadow:hover {
+  background: #699134;
+}
+a.btn.green2.shadow:hover:after {
+  background: #8ec447;
+}
+a.btn.green3 {
+  /* Button Color Variation: 'green3' */
+  background: #017554;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.22);
+}
+a.btn.green3:hover {
+  background: #02a779;
+}
+a.btn.green3.shadow {
+  background: #015a41;
+}
+a.btn.green3.shadow:after {
+  background: #017554;
+}
+a.btn.green3.shadow:hover {
+  background: #017353;
+}
+a.btn.green3.shadow:hover:after {
+  background: #02a779;
+}
+a.btn.orange {
+  /* Button Color Variation: 'orange' */
+  background: #f9720c;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.22);
 }
 a.btn.orange:hover {
-  background: #a03e2b;
+  background: #fa8f3e;
 }
-a.btn.orange:hover.shadow:after {
+a.btn.orange.shadow {
+  background: #b3662d;
+}
+a.btn.orange.shadow:after {
+  background: #f9720c;
+}
+a.btn.orange.shadow:hover {
+  background: #c77232;
+}
+a.btn.orange.shadow:hover:after {
+  background: #fa8f3e;
+}
+a.btn.orange2 {
+  /* Button Color Variation: 'orange2' */
+  background: #c77700;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.22);
+}
+a.btn.orange2:hover {
+  background: #fa9600;
+}
+a.btn.orange2.shadow {
+  background: #ae6800;
+}
+a.btn.orange2.shadow:after {
+  background: #c77700;
+}
+a.btn.orange2.shadow:hover {
+  background: #c77700;
+}
+a.btn.orange2.shadow:hover:after {
+  background: #fa9600;
+}
+a.btn.orange3 {
+  /* Button Color Variation: 'orange3' */
+  background: #c34026;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.22);
+}
+a.btn.orange3:hover {
+  background: #da5b42;
+}
+a.btn.orange3.shadow {
+  background: #923d2c;
+}
+a.btn.orange3.shadow:after {
+  background: #c34026;
+}
+a.btn.orange3.shadow:hover {
+  background: #a64532;
+}
+a.btn.orange3.shadow:hover:after {
   background: #da5b42;
 }
 a.btn.blue {
-  background: #066767;
-}
-a.btn.blue.shadow:after {
-  background: #038b8b;
+  /* Button Color Variation: 'blue' */
+  background: #51b3d5;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.22);
 }
 a.btn.blue:hover {
-  background: #077f7f;
+  background: #7ac5df;
 }
-a.btn.blue:hover.shadow:after {
+a.btn.blue.shadow {
+  background: #528b9d;
+}
+a.btn.blue.shadow:after {
+  background: #51b3d5;
+}
+a.btn.blue.shadow:hover {
+  background: #5e98ab;
+}
+a.btn.blue.shadow:hover:after {
+  background: #7ac5df;
+}
+a.btn.blue2 {
+  /* Button Color Variation: 'blue2' */
+  background: #0197b8;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.22);
+}
+a.btn.blue2:hover {
+  background: #01c0eb;
+}
+a.btn.blue2.shadow {
+  background: #02819f;
+}
+a.btn.blue2.shadow:after {
+  background: #0197b8;
+}
+a.btn.blue2.shadow:hover {
+  background: #0296b8;
+}
+a.btn.blue2.shadow:hover:after {
+  background: #01c0eb;
+}
+a.btn.blue3 {
+  /* Button Color Variation: 'blue3' */
+  background: #038b8b;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.22);
+}
+a.btn.blue3:hover {
+  background: #04bdbd;
+}
+a.btn.blue3.shadow {
+  background: #027171;
+}
+a.btn.blue3.shadow:after {
+  background: #038b8b;
+}
+a.btn.blue3.shadow:hover {
+  background: #038a8a;
+}
+a.btn.blue3.shadow:hover:after {
   background: #04bdbd;
 }
 a.btn.red {
-  background: #721526;
-}
-a.btn.red.shadow:after {
-  background: #931e33;
+  /* Button Color Variation: 'red' */
+  background: #e9230f;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.22);
 }
 a.btn.red:hover {
-  background: #88192d;
+  background: #f24a39;
 }
-a.btn.red:hover.shadow:after {
+a.btn.red.shadow {
+  background: #aa3629;
+}
+a.btn.red.shadow:after {
+  background: #e9230f;
+}
+a.btn.red.shadow:hover {
+  background: #bf3c2e;
+}
+a.btn.red.shadow:hover:after {
+  background: #f24a39;
+}
+a.btn.red2 {
+  /* Button Color Variation: 'red2' */
+  background: #f01c43;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.22);
+}
+a.btn.red2:hover {
+  background: #f34c6b;
+}
+a.btn.red2.shadow {
+  background: #ac354b;
+}
+a.btn.red2.shadow:after {
+  background: #f01c43;
+}
+a.btn.red2.shadow:hover {
+  background: #bf3b53;
+}
+a.btn.red2.shadow:hover:after {
+  background: #f34c6b;
+}
+a.btn.red3 {
+  /* Button Color Variation: 'red3' */
+  background: #931e33;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.22);
+}
+a.btn.red3:hover {
+  background: #bd2742;
+}
+a.btn.red3.shadow {
+  background: #75192a;
+}
+a.btn.red3.shadow:after {
+  background: #931e33;
+}
+a.btn.red3.shadow:hover {
+  background: #8a1d31;
+}
+a.btn.red3.shadow:hover:after {
   background: #bd2742;
 }
 
@@ -1945,10 +2656,12 @@ body.theme-rtl .tipsy {
   color: white;
   max-width: 200px;
   text-align: center;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -o-border-radius: 6px;
-  border-radius: 6px;
+  font-size: 0.875em;
+  font-family: "Lato", "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
 }
 
 .tipsy-arrow {

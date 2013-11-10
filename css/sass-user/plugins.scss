@@ -30,7 +30,9 @@ body.theme-rtl .tipsy {
 	color: white;
 	max-width: 200px;
 	text-align: center;
-	@include border-radius( 6px );
+	font-size: 0.875em;
+	@include font( lato );
+	@include border-radius( 3px );
 }
 
 .tipsy-arrow {

@@ -77,11 +77,11 @@
 						.iconed-links
 							%ul.rr
 								%li
-									%a.gemy{:href => '#', :title => 'Gemy.me Homepage'}
+									%a.gemy{:href => '#', :title => 'Gemy.me Homepage', :rel => 'tooltip bottom pos-top:30'}
 								%li
-									%a.github{:href => '#', :title => 'Project Repository on Github'}
+									%a.github{:href => '#', :title => 'Project Repository on Github', :rel => 'tooltip bottom pos-top:30'}
 								%li
-									%a.docs{:href => '#', :title => 'Gems/Sass Documentation'}
+									%a.docs{:href => '#', :title => 'Gems/Sass Documentation', :rel => 'tooltip bottom pos-top:30'}
 		//Header
 		\
 		
@@ -113,7 +113,7 @@
 						.clear
 						.buttons.col-6.offset-3
 							%a.btn.icn.primary.green2.download{:href => '#'} Download v1.x.x
-							%a.btn.icn.primary.black2.docs{:href => '#'} Documentation
+							%a.btn.icn.primary.black2.doc{:href => '#'} Documentation
 			//Hero Unit
 			\
 			
@@ -180,7 +180,7 @@
 			.container
 				.row
 					.buttons.center
-						%a.btn.icn.primary.red2.github{:href => '#'} Report Issues
+						%a.btn.icn.primary.red.github{:href => '#'} Report Issues
 						%a.btn.icn.primary.green3.docs{:href => '#'} Getting Started
 					.clear
 					.social-links
